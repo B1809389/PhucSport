@@ -48,10 +48,10 @@
                                 </li> -->
                             </ul>
                         </nav>
-                        
+
                     </div>
                     <div class="col l-10">
-                    <table class="table_oder">
+                        <table class="table_oder">
                             <tr class="table_oder__heading">
                                 <th class="table__th-id-order">ID Order</th>
                                 <th class="table__th-id-user-order">ID Customer</th>
@@ -62,11 +62,11 @@
                             </tr>
                             <?php
                             include './assets/php/connect_db.php';
-                            if(isset($_SESSION['user'])){
+                            if (isset($_SESSION['user'])) {
                                 $user = $_SESSION['user'];
                             }
-                            $search = mysqli_query($con,"select * from khachhang where User='$user'");
-                            while($r = mysqli_fetch_array($search)){
+                            $search = mysqli_query($con, "select * from khachhang where User='$user'");
+                            while ($r = mysqli_fetch_array($search)) {
                                 $maso = $r['MSKH'];
                             }
                             $result = mysqli_query($con, "select * from dathang where MSKH = '$maso' order by NgayDH");
@@ -108,7 +108,7 @@
                         }
                         ?>
 
-                        <div class="show__info-order">
+                        <div id="a" class="show__info-order">
 
                             <div class="show__info-order-text">
 
@@ -193,6 +193,8 @@
                                     <td class="table__td--showinfo"><?php echo number_format($s, 0, ',', '.') ?></td>
                                 </tr>
                             </table>
+                            <p id="demo">hello</p>
+                            <button onclick="document.getElementById('a').style.display = 'none'">Close</button>
                         </div>
 
                     </div>
@@ -206,6 +208,12 @@
     ?>
     </div>
 
+    <!-- <script src="./assets/js/handle.js"></script> -->
+    <script>
+        function close() {
+            document.getElementById("demo").style.color = "red";
+        }
+    </script>
     <!-- Sau div toan trang la Modal -->
 </body>
 <?php ob_flush() ?>
