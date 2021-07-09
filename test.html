@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <h1><i class="heart fas fa-heart"></i><i class="empty-heart far fa-heart"></i></h1>
+    <!-- <button type="button"><i class="heart fas fa-heart"></i></button> -->
+    <script>
+        var a = document.querySelector(".heart");
+        var x = document.querySelector(".empty-heart");
+        x.addEventListener("click", function() {
+
+            if (x.style.display === "block") {
+                x.style.display = "none";
+                a.style.display = "block";
+            } else {
+                //coll.style.display = "none";
+                x.style.display = "block";
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -104,9 +104,9 @@
                                 slides[slideIndex - 1].style.display = "block";
                                 dots[slideIndex - 1].className += " active1";
                             }
-                            setInterval(()=>{
+                            setInterval(() => {
                                 plusSlides(1)
-                            },3000)
+                            }, 3000)
                         </script>
                     </div>
                     <div class="col l-0 m-0 c-0">
@@ -177,70 +177,72 @@
 
 
                                     $result = mysqli_query($con, $sql);
-                                    while ($row = mysqli_fetch_array($result)) {
-                                        echo '<div class="col l-2-4 m-4 c-6">';
-                                        echo '<a href="./product.php?MLH=' . $row['MaLoaiHang'] . '&id=' . $row['TenHH'] . '" class="home-product__link">';
-                                        echo '<div class="home-product-item">';
-                                        echo '<div class="home-product-item__img" style="background-image: url(' . $row['HinhAnh'] . ');">';
-                                        echo '</div>';
-                                        echo '<h4 class="home-product-item__name">' . $row['TenHH'] . '</h4>';
-                                        echo '<div class="home-product-item__price">';
-                                        echo '<span class="home-product-item__price-old">' . number_format($row['Gia_Cu'], 0, ',', '.') . 'đ</span>';
-                                        echo '<span class="home-product-item__price-current">' . number_format($row['Gia'], 0, ',', '.') . 'đ</span>';
-                                        echo '</div>';
-                                        echo '<div class="home-product-item__action">';
-                                        echo '<span class="home-product-item__like--liked">';
-                                        echo '<i class="home-product-item__like-icon-empty far fa-heart"></i>';
-                                        echo '<i class="home-product-item__like-icon-fill fas fa-heart"></i>';
-                                        echo '</span>';
-                                        echo '<div class="home-product-item__rating">';
-                                        echo '<i class="home-product-item__rating-icon-star fas fa-star"></i>';
-                                        echo '<i class="home-product-item__rating-icon-star fas fa-star"></i>';
-                                        echo '<i class="home-product-item__rating-icon-star fas fa-star"></i>';
-                                        echo '<i class="home-product-item__rating-icon-star fas fa-star"></i>';
-                                        echo '<i class="home-product-item__rating-icon-star home-product-item__rating-icon-star-none fas fa-star"></i>';
-                                        echo '</div>';
-                                        echo '</div>';
-                                        echo '<div class="home-product-item__favorite">';
-                                        echo '<i class="home-product-item__favorite-icon fas fa-check"></i> Like';
-                                        echo '</div>';
-                                        echo '</div>';
-                                        echo '</a>';
-                                        echo '</div>';
+                                    while ($row = mysqli_fetch_array($result)) { ?>
+                                        <div class="col l-2-4 m-4 c-6">
+                                            <a href="./product.php?MLH= <?= $row['MaLoaiHang'] ?>&id=<?= $row['TenHH'] ?>" class="home-product__link">
+                                                <div class="home-product-item">
+                                                    <div class="home-product-item__img" style="background-image: url(<?= $row['HinhAnh'] ?>);">
+                                                    </div>
+                                                    <h4 class="home-product-item__name"><?= $row['TenHH'] ?></h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old"><?= number_format($row['Gia_Cu'], 0, ',', '.') ?>đ</span>
+                                                        <span class="home-product-item__price-current"><?= number_format($row['Gia'], 0, ',', '.') ?>đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                                        <span class="home-product-item__like--liked">
+                                                            <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__rating-icon-star fas fa-star"></i>
+                                                            <i class="home-product-item__rating-icon-star fas fa-star"></i>
+                                                            <i class="home-product-item__rating-icon-star fas fa-star"></i>
+                                                            <i class="home-product-item__rating-icon-star fas fa-star"></i>
+                                                            <i class="home-product-item__rating-icon-star home-product-item__rating-icon-star-none fas fa-star"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="home-product-item__favorite">
+                                                        <i class="home-product-item__favorite-icon fas fa-check"></i> Like
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <?php
                                     }
                                 } else {
                                     $sql = "select * from hanghoa order by Gia desc";
                                     $result = mysqli_query($con, $sql);
-                                    while ($row = mysqli_fetch_array($result)) {
-                                        echo '<div class="col l-2-4 m-4 c-6">';
-                                        echo '<a href="./product.php?MLH=' . $row['MaLoaiHang'] . '&id=' . $row['TenHH'] . '" class="home-product__link">';
-                                        echo '<div class="home-product-item">';
-                                        echo '<div class="home-product-item__img" style="background-image: url(' . $row['HinhAnh'] . ');">';
-                                        echo '</div>';
-                                        echo '<h4 class="home-product-item__name">' . $row['TenHH'] . '</h4>';
-                                        echo '<div class="home-product-item__price">';
-                                        echo '<span class="home-product-item__price-old">' . number_format($row['Gia_Cu'], 0, ',', '.') . 'đ</span>';
-                                        echo '<span class="home-product-item__price-current">' . number_format($row['Gia'], 0, ',', '.') . 'đ</span>';
-                                        echo '</div>';
-                                        echo '<div class="home-product-item__action">';
-                                        echo '<span class="home-product-item__like--liked">';
-                                        echo '<i class="home-product-item__like-icon-empty far fa-heart"></i>';
-                                        echo '<i class="home-product-item__like-icon-fill fas fa-heart"></i>';
-                                        echo '</span>';
-                                        echo '<div class="home-product-item__rating">';
-                                        echo '<i class="home-product-item__rating-icon-star fas fa-star"></i>';
-                                        echo '<i class="home-product-item__rating-icon-star fas fa-star"></i>';
-                                        echo '<i class="home-product-item__rating-icon-star fas fa-star"></i>';
-                                        echo '<i class="home-product-item__rating-icon-star fas fa-star"></i>';
-                                        echo '<i class="home-product-item__rating-icon-star home-product-item__rating-icon-star-none fas fa-star"></i>';
-                                        echo '</div>';
-                                        echo '</div>';
-                                        echo '<div class="home-product-item__favorite">';
-                                        echo '<i class="home-product-item__favorite-icon fas fa-check"></i> Like';
-                                        echo '</div>';
-                                        echo '</div>';
-                                        echo '</a>';
-                                        echo '</div>';
+                                    while ($row = mysqli_fetch_array($result)) { ?>
+                                        <div class="col l-2-4 m-4 c-6">
+                                            <a href="./product.php?MLH= <?= $row['MaLoaiHang'] ?>&id=<?= $row['TenHH'] ?>" class="home-product__link">
+                                                <div class="home-product-item">
+                                                    <div class="home-product-item__img" style="background-image: url(<?= $row['HinhAnh'] ?>);">
+                                                    </div>
+                                                    <h4 class="home-product-item__name"><?= $row['TenHH'] ?></h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old"><?= number_format($row['Gia_Cu'], 0, ',', '.') ?>đ</span>
+                                                        <span class="home-product-item__price-current"><?= number_format($row['Gia'], 0, ',', '.') ?>đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                                        <span class="home-product-item__like--liked">
+                                                            <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__rating-icon-star fas fa-star"></i>
+                                                            <i class="home-product-item__rating-icon-star fas fa-star"></i>
+                                                            <i class="home-product-item__rating-icon-star fas fa-star"></i>
+                                                            <i class="home-product-item__rating-icon-star fas fa-star"></i>
+                                                            <i class="home-product-item__rating-icon-star home-product-item__rating-icon-star-none fas fa-star"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="home-product-item__favorite">
+                                                        <i class="home-product-item__favorite-icon fas fa-check"></i> Like
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                <?php
                                     }
                                 }
                                 ?>

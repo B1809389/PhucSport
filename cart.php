@@ -50,7 +50,7 @@
         }
         ?>
         <!-- Container -->
-        <div class="app_container">
+        <div class="app__container">
             <div class="grid wide">
                 <div class="row">
 

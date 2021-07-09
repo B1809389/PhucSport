@@ -29,12 +29,12 @@
             $id = $_GET['id'];
             $result = mysqli_query($con, "select * from hanghoa where TenHH='$id'");
             while ($row = mysqli_fetch_array($result)) {
-                $mota = explode("$$$",$row['MoTa']);
+                $mota = explode("$$$", $row['MoTa']);
         ?>
 
 
                 <!-- Container -->
-                <div class="app_container">
+                <div class="app__container">
                     <div class="grid wide">
                         <div class="row app__content">
                             <div class="col l-9 product__info">
@@ -148,21 +148,8 @@
                                 <p class="product__special-text-img">
                                     <img class="product__special-img" src="<?php echo $row['HinhAnh'] ?>" alt="">
                                 </p>
-                                <!-- <div class="product__special-info">
-                                    <p class="product__special-text"><b>Công nghệ màn hình:</b> OLED</p>
-                                    <p class="product__special-text"><b>Độ phân giải:</b> 1284 x 2778 Pixels, 3 Camera 12 MP</p>
-                                    <p class="product__special-text"><b>Màn hình rộng:</b> 6.1"</p>
-                                    <p class="product__special-text"><b>Hệ điều hành:</b> iOS 14</p>
-                                    <p class="product__special-text"><b>Chip xử lý (CPU):</b> Apple A14 Bionic 6 nhân</p>
-                                    <p class="product__special-text"><b>Bộ nhớ trong (ROM):</b> 512 GB</p>
-                                    <p class="product__special-text"><b>RAM:</b> 6 GB</p>
-                                    <p class="product__special-text"><b>Mạng di động:</b> Hỗ trợ 5G</p>
-                                    <p class="product__special-text"><b>Số khe sim:</b> 1 Nano SIM & 1 eSIM</p>
-                                    <p class="product__special-text"><b>Trọng lượng:</b> 189 g</p>
-                                    <p class="product__special-text"><b>Dung lượng pin:</b> 2815 mAh</p>
-                                </div> -->
-                                <?php 
-                                    echo $mota[1];
+                                <?php
+                                echo $mota[1];
                                 ?>
                             </div>
                         </div>

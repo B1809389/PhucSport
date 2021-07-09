@@ -34,7 +34,7 @@
         }
         ?>
 
-        <div class="app_container">
+        <div class="app__container">
             <div class="grid wide">
                 <div class="row app__content">
                     <div class="col l-2 m-0 c-0">

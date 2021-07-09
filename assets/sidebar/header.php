@@ -3,14 +3,13 @@ session_start();
 ?>
 <header class="header">
     <div class="grid wide">
-        <!-- main notify -->
-        <nav class="header__navbar hide-on-mobile-tablet">
-            <div class="header__navbar-list">
-                <!-- Header QR -->
-                <!-- <li class="header__navbar-item header__navbar-item--has-qr"> -->
-                <div class="header__navbar-qr-wrap">
-                    <a class="header__navbar-item--no-pointer">Mobile H-Shop</a>
-                    <div class="header__qr">
+        <div class="row">
+            <!-- <div class="col l-12">
+                </div> -->
+            <div class="header__top">
+                <div class="header__top-logo">
+                    <h1 class="header__top-logo-text"> <span class="header__top-logo-text-color" style="color: #58b0d9">Rabbit</span> Shop</h1>
+                    <div class="header__top-logo-qr-wrap">
                         <img src="./assets/image/qr_web.png" alt="QR Code" class="header__qr-img">
                         <div class="header__qr-apps">
                             <a href="" class="header__qr-link"><img src="./assets/image/QR_Appstore.png" alt="App Store" class="header__qr-download-img"></a>
@@ -18,254 +17,60 @@ session_start();
                         </div>
                     </div>
                 </div>
-                <!-- </li> -->
-                <div class="header__navbar-item">
-                    <a class="header__navbar-item--no-pointer">Connect</a>
-                    <a href="" class="header__navbar-icon-link">
-                        <i class="header__navbar-icon fab fa-facebook"></i>
-
-                    </a>
-                    <a href="" class="header__navbar-icon-link">
-                        <i class="header__navbar-icon fab fa-instagram"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="header__navbar-list">
-                <!-- <div class="header__navbar-item header__navbar-item--has-info"> -->
-                <div class="header__navbar-item-notify-wrap">
-
-                    <i class="header__navbar-icon far fa-bell"></i>
-                    <a href="" class="header__navbar-item-link">
-                        Notification
-                    </a>
-                    <div class="header__notify">
-                        <header class="header__notify-header">
-                            <h3>New Notification</h3>
-                        </header>
-
-                        <div class="header__notify-list">
-                            <div class="header__notify-item header__notify-item--viewed">
-                                <a href="" class="header__notify-link">
-                                    <img src="./assets/image/phone_notify.jpg" alt="" class="header__notify-img">
-                                    <div class="header__notify-info">
-                                        <span class="header__notify-name">ROG Phone 2021</span>
-                                        <span class="header__notify-description">Hieu nang cuc dinh
-                                            nhieu</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="header__notify-item header__notify-item--viewed">
-                                <a href="" class="header__notify-link">
-                                    <img src="./assets/image/phone_notify_1.jpg" alt="" class="header__notify-img">
-                                    <div class="header__notify-info">
-                                        <span class="header__notify-name">ROG Phone 2020</span>
-                                        <span class="header__notify-description">Giam gia cuc soc den 30%</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="header__notify-item">
-                                <a href="" class="header__notify-link">
-                                    <img src="./assets/image/phone_notify_2.jpg" alt="" class="header__notify-img">
-                                    <div class="header__notify-info">
-                                        <span class="header__notify-name">IPhone 12</span>
-                                        <span class="header__notify-description">Chup hinh cuc net</span>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="header__notify-item">
-                                <a href="" class="header__notify-link">
-                                    <img src="./assets/image/phone_notify_3.jpg" alt="" class="header__notify-img">
-                                    <div class="header__notify-info">
-                                        <span class="header__notify-name">Iphone 12 mini</span>
-                                        <span class="header__notify-description">Nho gon, tien loi</span>
-                                    </div>
-                                </a>
-                            </div>
+                <div class="header__top-action">
+                    <?php
+                    if (isset($_SESSION['user'])) {
+                        echo '<style>.header__top-action-signed{display:flex;}</style>';
+                    } else {
+                        echo '<style>.header__top-action-sign{display:flex;}</style>';
+                    }
+                    ?>
+                    <div class="header__top-register__login-wrap">
+                        <div class="header__top-action-sign">
+                            <div class="header__top-register"><a href="./register_login.php?action=register" class="header__top-action-sign-link">Register</a></div>
+                            <div class="header__top-login"><a href="./register_login.php?action=login" class="header__top-action-sign-link">Sign In</a></div>
                         </div>
 
-                        <footer class="header__notify-footer">
-                            <a href="" class="header__notify-footer-btn">Show All</a>
-                        </footer>
-                    </div>
-                </div>
-                <!-- </div> -->
-                <div class="header__navbar-item">
-                    <i class="header__navbar-icon far fa-question-circle"></i>
-                    <a href="" class="header__navbar-item-link">
-                        Help</a>
-                </div>
-                <!-- User -->
-                <?php
-                if (isset($_SESSION['user'])) {
-                    echo '<style>.header__navbar-item--strong{display:none;}</style>';
-                    echo '<div class="header__navbar-user-wrap">';
-                    echo '<img src="./assets/image/user_image.png" alt="user_img" class="header__navbar-user-img">';
-                    echo '<span class="header__navbar-user-name">' . $_SESSION['user'] . '</span>';
-                    echo '<div class="header__navbar-user-menu">';
-                    echo '<div class="header__navbar-user-item">';
-                    echo '<a href="./user.php">Account</a>';
-                    echo '</div>';
-                    echo '<div class="header__navbar-user-item">';
-                    echo '<a href="./history.php">History</a>';
-                    echo '</div>';
-                    echo '<div class="header__navbar-user-item">';
-                    echo '<a href="./logout.php">Log out</a>';
-                    echo '</div>';
-                    echo '</div>';
-                    echo '</div>';
-                ?>
-                    <!-- Khi chua dang nhap thi in ra 2 thang nay -->
-                <?php } else {
-                    echo '<style>.header__navbar-user-wrap{display:none;}</style>';
-                    echo '<li class="header__navbar-item header__navbar-item--strong"><a href="./register_login.php?action=register" class="register-login__link">Register</a></li>';
-                    echo '<div class="header__navbar-item header__navbar-item--strong"><a href="./register_login.php?action=login" class="register-login__link">Log In</a></div>';
-                }
-                ?>
-            </div>
-        </nav>
-        <!-- container search -->
-        <div class="header-with-search">
-            <!-- responsive -->
-            <div class="responsive__wrap">
-                <label for="responsive__bars" class="responsive__bars">
-                    <i class="responsive__bars-icon fas fa-bars"></i>
-                </label>
-                <label for="responsive__search" class="responsive__search">
-                    <i class="responsive__search-icon fas fa-search"></i>
-                </label>
-            </div>
+                        <div class="header__top-action-signed">
+                            <i class="header__top-sign-in-icon fas fa-user-circle"></i>
+                            <div class="header__top-sign-in-user-name"><?php
+                                                                        if (isset($_SESSION['user'])) {
+                                                                            echo $_SESSION['user'];
+                                                                        }
+                                                                        ?></div>
 
-                <?php
-                    if(isset($_SESSION['user'])){
-                        echo '<style>.responsive__bars-btn-wrap{display:none;} .responsive__bars-btn-wrap--logged-in{width:100%;display:inline-flex; justify-content: space-between;}</style>';
-                    }
-                ?>
-            <input type="checkbox" hidden id="responsive__bars" class="checkbox__bars">
-            <div class="responsive__bars-wrap">
-                <div class="responsive__bars-btn-wrap">
-                    <a href="./register_login.php?action=register" class="responsive__register-login__link">Register</a>
-                    <a href="./register_login.php?action=login" class="responsive__register-login__link">Log In</a>
-                </div>
-                <div class="responsive__bars-btn-wrap--logged-in">
-                    <div class="header__navbar-user-wrap">
-                    <img src="./assets/image/user_image.png" alt="user_img" class="header__navbar-user-img">
-                    <span class="header__navbar-user-name" style="color:#025f99"><?= $_SESSION['user'] ?></span>
+                            <div class="header__top-action-signed-wrap">
+                                <ul class="header__top-action-signed-wrap-list">
+                                    <li class="header__top-action-signed-wrap-item"><a href="./user.php" class="header__top-action-signed-wrap-item-link"><i class="fas fa-user-edit"></i> Account</a></li>
+                                    <li class="header__top-action-signed-wrap-item"><a href="./history.php" class="header__top-action-signed-wrap-item-link"><i class="fas fa-history"></i> History</a></li>
+                                    <li class="header__top-action-signed-wrap-item"><a href="./logout.php" class="header__top-action-signed-wrap-item-link"><i class="fas fa-sign-out-alt"></i> Sign Out</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <span class="header__navbar-user-name" style="color: #ee4d2d"><a href="./logout.php" class="responsive__register-login__link">Log out</a></span>
-                    <!-- <a href="./logout.php" class="responsive__register-login__link">Log Out</a> -->
-                </div>
-                    <?php
-                        if(isset($_SESSION['user']) && $_SESSION['user'] == 'admin'){
-                            echo '<style>.responsive__bars-list--user{display:none;} .responsive__bars-list--admin{display:block;}</style>';
-                        }else if(isset($_SESSION['user']) && $_SESSION['user'] != 'admin'){
-                            echo '<style>.responsive__bars-list--user{display:block;} .responsive__bars-list--admin{display:none;}</style>';
-                        }
-                        else{
-                            echo '<style>.responsive__bars-list--user{display:block;} .responsive__bars-list--admin{display:none;}</style>';
-                        }
-                    ?>
-                <ul class="responsive__bars-list--user">
-                    <li class="responsive__bars-item">PRODUCT LIST</li>
-                    <li class="responsive__bars-item"><a href="./index.php?action=AP" class="category-item-link">APPLE</a></li>
-                    <li class="responsive__bars-item"><a href="./index.php?action=SS" class="category-item-link">SAMSUNG</a></li>
-                    <li class="responsive__bars-item"><a href="./index.php?action=AS" class="category-item-link">ASUS</a></li>
-                    <li class="responsive__bars-item"><a href="./index.php?action=OP" class="category-item-link">OPPO</a></li>
-                </ul>
-                <ul class="responsive__bars-list--admin">
-                    <li class="responsive__bars-item">MANAGE LIST</li>
-                    <li class="responsive__bars-item"><a href="./admin.php" class="category-item-link">Dashboard</a></li>
-                    <li class="responsive__bars-item"><a href="./product_manage.php" class="category-item-link">Product Manage</a></li>
-                    <li class="responsive__bars-item"><a href="./user_manage.php" class="category-item-link">Account Manage</a></li>
-                    <li class="responsive__bars-item"><a href="./order_manage.php" class="category-item-link">Order Manage</a></li>
-                </ul>
-            </div>
 
+                    <div class="header__top-cart">
 
-            <!-- Logo -->
-            <div class="header__logo">
-                <a href="/Web_Phone/index.php" class="">
-                    <img src="./assets/image/logo.png" alt="logo_tech" class="header__logo-image">
-                    <!-- H-Shop Mobile header__logo-link -->
-                </a>
-            </div>
-            <!-- Search -->
-            <input type="checkbox" hidden id="responsive__search" class="checkbox__search">
-            <div class="header__search">
-                <!-- Input -->
-                <div class="header__search-input-wrap">
-                    <input type="text" class="header__search-input" placeholder="Search">
-                    <div class="header__search-history">
-                        <h3 class="header__search-history-heading">Search History</h3>
-                        <ul class="header__search-history-list">
-                            <li class="header__search-history-item">
-                                <a href="./index.php?action=AP">Iphone</a>
-                            </li>
-                            <li class="header__search-history-item">
-                                <a href="./index.php?action=SS">SamSung</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Select -->
-                <div class="header__search-select">
-                    <span class="header__search-select-label">In shop </span>
-                    <i class="header__search-select-icon fas fa-chevron-down"></i>
-                    <!-- option -->
-                    <ul class="header__search-option">
-                        <li class="header__search-option-item header__search-option-item--active">
-                            <span>In Shop</span>
-                            <i class="header__search-option-icon fas fa-check"></i>
-                        </li>
-                        <li class="header__search-option-item">
-                            <span>Our Shop</span>
-                            <i class="header__search-option-icon fas fa-check"></i>
-                        </li>
-                    </ul>
-                </div>
-                <!-- button -->
-                <button class="header__search-btn">
-                    <i class="header__search-btn-icon fas fa-search"></i>
-                </button>
-            </div>
-            <?php
-            if (!isset($_SESSION['cart'])) {
-                echo "<style>.header__cart-list--has-cart{display:none;}</style>";
-            } else {
-                echo "<style>.header__cart-list--no-cart{display:none;}</style>";
-            }
-            ?>
-            <!-- Cart layout-->
-            <div class="header__cart">
-                <div class="header__cart-wrap">
-                    <input type="checkbox" hidden id="responsive__cart" class="checkbox__cart">
-                    <label for="responsive__cart" class="responsive__cart">
-                    <i class="header__cart-icon fas fa-shopping-cart"></i>
-                    <span class="header__cart-notice"><?php
-                                                        if (isset($_SESSION['cart'])) {
-                                                            $i = 0;
-                                                            foreach ($_SESSION['cart'] as $key => $value) {
-                                                                $i++;
-                                                            }
-                                                            echo $i;
-                                                        } else {
-                                                            echo 0;
-                                                        }
-                                                        ?></span>
-                    </label>
-                    <!-- No cart thi them vao la hien ra:  header__cart-list--no-cart -->
-                    <div class="header__cart-list">
-                        <div class="header__cart-list--no-cart">
-                            <img src="./assets/image/no_cart.png" alt="" class="header__cart-list--no-cart-img">
-                            <span class="header__cart-list--no-cart-text">No Product Here !</span>
+                        <i class="header__top-cart-icon fas fa-shopping-cart"></i>
+                        <div class="header__top-cart-notice"><?php
+                                                                if (isset($_SESSION['cart'])) {
+                                                                    $i = 0;
+                                                                    foreach ($_SESSION['cart'] as $key => $value) {
+                                                                        $i++;
+                                                                    }
+                                                                    echo $i;
+                                                                } else {
+                                                                    echo 0;
+                                                                }
+                                                                ?></div>
+
+                        <div class="header__top-cart-wrap--no-cart">
+                            <img src="./assets/image/no_cart.png" alt="" class="header__top-cart-wrap-img">
                         </div>
                         <?php
                         if (isset($_SESSION['cart'])) {
                         ?>
-                            <div class="header__cart-list--has-cart">
+                            <div class="header__top-cart-wrap--has-cart">
                                 <h3 class="header__cart-list-heading">Product Added</h3>
                                 <ul class="header__cart-list-item-ul">
                                     <?php
@@ -283,10 +88,7 @@ session_start();
                                                         <span class="header__cart-list-item-quantity"><?php echo $value['sl'] ?></span>
                                                     </div>
                                                 </div>
-                                                <!-- <div class="header__cart-list-item-container">
-                                                    <span class="header__cart-list-item-description">New Product 2021</span>
-                                                    <span class="header__cart-list-item-remove">Delete</span>
-                                                </div> -->
+
                                             </div>
                                         </li>
                                     <?php } ?>
@@ -295,14 +97,154 @@ session_start();
                                     <button class="header__cart-view-cart-btn"><a href="./cart.php" class="header__cart-view-cart-btn-link">View Cart</a></button>
                                 </div>
                             </div>
+                        <?php
+                        }
+                        ?>
+                        <?php
+                        if (!isset($_SESSION['cart'])) {
+                            echo "<style>
+                            .header__top-cart:hover .header__top-cart-wrap--no-cart {
+                                display: block;
+                                cursor: pointer;
+                            }</style>";
+                        } else {
+                            echo "<style>.header__top-cart:hover .header__top-cart-wrap--has-cart {
+                                display: block;
+                                cursor: pointer;
+                            }</style>";
+                        }
+                        ?>
+                    </div>
+                    
+                    <div class="header__top-responsive-navbar-menu-wrap">
+                    <button class='bars' type="button"><i class="header__top-responsive-navbar-menu-icon fas fa-bars"></i></button>           
+                        <div class="header__top-responsive-navbar-menu-wrap-none">
+                            
+                            <div class="header__top-responsive-navbar-menu-wrap-none-search">
+                                <input type="text" class="header__bottom-search-input__responsive">
+                                <button class="header__bottom-search-button__responsive">Search</button>
+                            </div>
+                            <div class="header__top-responsive-navbar-menu-wrap-none-login">
+                                <?php
+                                if (isset($_SESSION['user'])) {
+                                    echo '<style>.header__top-responsive-navbar-menu-wrap-none-signed{display:flex;}</style>';
+                                } else {
+                                    echo '<style>.header__top-responsive-navbar-menu-wrap-none-not-login{display:flex;}</style>';
+                                }
+                                ?>
+                                <div class="header__top-responsive-navbar-menu-wrap-none-not-login">
+                                    <a href="./register_login.php?action=register" class="header__top-responsive-navbar-menu-wrap-none-login-link">Register</a>
+                                    <a href="./register_login.php?action=login" class="header__top-responsive-navbar-menu-wrap-none-login-link">Sign In</a>
+                                </div>
 
+                                <div class="header__top-responsive-navbar-menu-wrap-none-signed">
+                                    <a href="./user.php" class="header__top-responsive-navbar-menu-wrap-none-signed-link">
+                                        <i class="header__top-sign-in-icon fas fa-user-circle"></i>
+                                        <div class="header__top-sign-in-user-name"><?php
+                                                                                    if (isset($_SESSION['user'])) {
+                                                                                        echo $_SESSION['user'];
+                                                                                    }
+                                                                                    ?></div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="header__top-responsive-navbar-menu-wrap-none-menu">
+                                <ul class="header__top-responsive-navbar-menu-wrap-none-menu-list">
+                                    <li class="header__top-responsive-navbar-menu-wrap-none-menu-item color-blue-main"><i class="fas fa-home"></i> Home</li>
+                                    <li class="header__top-responsive-navbar-menu-wrap-none-menu-item color-blue-main"><i class="fas fa-list"></i> Categories
+                                        <ul class="header__top-responsive-navbar-menu-wrap-none-menu-list color-white-main">
+                                            <li class="header__top-responsive-navbar-menu-wrap-none-menu-item"><i class="fas fa-mobile-alt"></i> Apple</li>
+                                            <li class="header__top-responsive-navbar-menu-wrap-none-menu-item"><i class="fas fa-mobile-alt"></i> Samsung</li>
+                                            <li class="header__top-responsive-navbar-menu-wrap-none-menu-item"><i class="fas fa-mobile-alt"></i> Oppo</li>
+                                            <li class="header__top-responsive-navbar-menu-wrap-none-menu-item"><i class="fas fa-mobile-alt"></i> Asus</li>
+                                            <li class="header__top-responsive-navbar-menu-wrap-none-menu-item"><i class="fas fa-border-all"></i> Other</li>
+                                        </ul>
+                                    </li>
+                                    <li class="header__top-responsive-navbar-menu-wrap-none-menu-item color-blue-main"><i class="far fa-edit"></i> Blog</li>
+                                    <li class="header__top-responsive-navbar-menu-wrap-none-menu-item color-blue-main"><i class="fas fa-shopping-bag"></i><a href="./history.php" class="header__top-responsive-navbar-menu-wrap-none-history-link"> History</a></li>
+                                    <li class="header__top-responsive-navbar-menu-wrap-none-menu-item color-blue-main"><i class="far fa-address-book"></i> Contact</li>
+                                </ul>
+                            </div>
+                            <div class="header__top-responsive-navbar-menu-wrap-none-footer">
+                                <a href="./logout.php" class="header__top-responsive-navbar-menu-wrap-none-signed-link">
+                                    <i class="fas fa-sign-out-alt"></i> Sign Out
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        <?php
+            <div class="header__bottom hide-on-mobile-tablet">
+                <div class="header__bottom-navbar">
+                    <div class="header__bottom-navbar-menu"> <a href="./index.php" class="header__bottom-navbar-menu-link"><i class="fas fa-home"></i></a></div>
+                    <div class="header__bottom-navbar-menu">CATEGORIES
+                        <div class="header__bottom-navbar-menu-none">
+                            <ul class="header__bottom-navbar-menu-none-list">
+                                <li class="header__bottom-navbar-menu-none-item"><i class="fab fa-apple"></i> APPLE
+                                    <h4><i class="list__list-icon fas fa-chevron-circle-right"></i> iPhone</h4>
 
-                        }
-        ?>
+                                    <ul class="list__list">
+                                        <li class="list__list-item"><i class="fas fa-mobile-alt"></i> iPhone 12</li>
+                                        <li class="list__list-item"><i class="fas fa-mobile-alt"></i> iPhone 11</li>
+                                        <li class="list__list-item"><i class="fas fa-mobile-alt"></i> iPhone X</li>
+                                    </ul>
+                                    <h4><i class="list__list-icon fas fa-chevron-circle-right"></i> Apple Watch</h4>
+                                    <ul class="list__list">
+                                        <li class="list__list-item">Series 5</li>
+                                        <li class="list__list-item">Series 6</li>
+                                    </ul>
+                                </li>
+                                <li class="header__bottom-navbar-menu-none-item">SAMSUNG
+                                    <h4><i class="list__list-icon fas fa-chevron-circle-right"></i> Samsung Galaxy</h4>
+
+                                    <ul class="list__list">
+                                        <li class="list__list-item"><i class="fas fa-mobile-alt"></i> Galaxy Fold</li>
+                                        <li class="list__list-item"><i class="fas fa-mobile-alt"></i> Galaxy S21</li>
+                                        <li class="list__list-item"><i class="fas fa-mobile-alt"></i> Galaxy S10</li>
+                                    </ul>
+                                    <h4><i class="list__list-icon fas fa-chevron-circle-right"></i> Samsung Watch</h4>
+                                    <ul class="list__list">
+                                        <li class="list__list-item">Galaxy Watch 3</li>
+                                        <li class="list__list-item">Galaxy Active 2</li>
+                                        <li class="list__list-item">Galaxy Fit</li>
+                                    </ul>
+                                </li>
+                                <li class="header__bottom-navbar-menu-none-item">OPPO
+                                    <ul class="list__list">
+                                        <li class="list__list-item"><i class="fas fa-mobile-alt"></i> Oppo Reno 5</li>
+                                        <li class="list__list-item"><i class="fas fa-mobile-alt"></i> Oppo Reno 4Pro</li>
+                                        <li class="list__list-item"><i class="fas fa-mobile-alt"></i> Oppo Limited</li>
+                                    </ul>
+                                </li>
+                                <li class="header__bottom-navbar-menu-none-item">ASUS
+                                    <ul class="list__list">
+                                        <li class="list__list-item"><i class="fas fa-mobile-alt"></i> Asus ROG 3</li>
+                                        <li class="list__list-item"><i class="fas fa-mobile-alt"></i> Asus ROG 1</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header__bottom-navbar-menu">BLOG</div>
+                    <div class="header__bottom-navbar-menu">ABOUT US</div>
+                </div>
+                <div class="header__bottom-search">
+                    <!-- <input type="text" placeholder="Search" class="header__bottom-search-input"> -->
+                    <input type="text" class="header__bottom-search-input__responsive">
+                    <button class="header__bottom-search-button__responsive">Search</button>
+                </div>
+            </div>
         </div>
     </div>
+    <script>
+        var coll = document.querySelector(".bars");
+        coll.addEventListener("click", function() {
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        });
+    </script>
 </header>
