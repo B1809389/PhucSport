@@ -193,7 +193,6 @@
                                     <td class="table__td--showinfo"><?php echo number_format($s, 0, ',', '.') ?></td>
                                 </tr>
                             </table>
-                            <p id="demo">hello</p>
                             <button onclick="document.getElementById('a').style.display = 'none'">Close</button>
                         </div>
 
@@ -208,12 +207,8 @@
     ?>
     </div>
 
-    <!-- <script src="./assets/js/handle.js"></script> -->
-    <script>
-        function close() {
-            document.getElementById("demo").style.color = "red";
-        }
-    </script>
+    <script src="./assets/js/handle.js"></script>
+    
     <!-- Sau div toan trang la Modal -->
 </body>
 <?php ob_flush() ?>

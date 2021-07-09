@@ -114,7 +114,7 @@
                         }
                         ?>
 
-                        <div class="show__info-order">
+                        <div id="a" class="show__info-order">
 
                             <div class="show__info-order-text">
 
@@ -199,6 +199,7 @@
                                     <td class="table__td--showinfo"><?php echo number_format($s, 0, ',', '.') ?></td>
                                 </tr>
                             </table>
+                            <button onclick="document.getElementById('a').style.display = 'none'">Close</button>
                         </div>
                     </div>
                 </div>
