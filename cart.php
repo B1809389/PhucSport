@@ -26,7 +26,7 @@
         if (isset($_GET['action']) && isset($_GET['ms'])) {
             $action = $_GET['action'];
             $ms = $_GET['ms'];
-            $sql = "select * from hanghoa where MSHH='$ms'";
+            $sql = "select * from hanghoa as a, hinhhanghoa as b where a.MSHH='$ms' AND b.MSHH='$ms'";
             $query = mysqli_query($con, $sql);
             $row = mysqli_fetch_array($query);
             $quantity = $row['SoLuongHang'];
@@ -37,7 +37,7 @@
                     $_SESSION['cart'][$ms]['sl'] = 1;
                 }
                 $_SESSION['cart'][$ms]['name'] = $row['TenHH'];
-                $_SESSION['cart'][$ms]['image'] = $row['HinhAnh'];
+                $_SESSION['cart'][$ms]['image'] = $row['TenHinh'];
                 $_SESSION['cart'][$ms]['price'] = $row['Gia'];
                 $_SESSION['cart'][$ms]['ms'] = $row['MSHH'];
             } else {

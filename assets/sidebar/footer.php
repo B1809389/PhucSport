@@ -8,7 +8,7 @@
                         <a href="" class="footer__list-item-link">Help Center</a>
                     </li>
                     <li class="footer__list-item">
-                        <a href="" class="footer__list-item-link">H-Shop Blog</a>
+                        <a href="" class="footer__list-item-link">PhucSports Store</a>
                     </li>
                     <li class="footer__list-item">
                         <a href="" class="footer__list-item-link">Customer Care</a>
@@ -19,7 +19,7 @@
                 <h3 class="footer__heading">Introduce</h3>
                 <ul class="footer__list">
                     <li class="footer__list-item">
-                        <a href="" class="footer__list-item-link">Introduce H-Shop</a>
+                        <a href="" class="footer__list-item-link">Introduce PhucSports</a>
                     </li>
                     <li class="footer__list-item">
                         <a href="" class="footer__list-item-link">Recruitment</a>
@@ -33,16 +33,16 @@
                 <h3 class="footer__heading">Product List</h3>
                 <ul class="footer__list">
                     <li class="footer__list-item">
-                        <a href="" class="footer__list-item-link">Apple</a>
+                        <a href="" class="footer__list-item-link">Nike</a>
                     </li>
                     <li class="footer__list-item">
-                        <a href="" class="footer__list-item-link">SamSung</a>
+                        <a href="" class="footer__list-item-link">Adidas</a>
                     </li>
                     <li class="footer__list-item">
-                        <a href="" class="footer__list-item-link">OPPO</a>
+                        <a href="" class="footer__list-item-link">Mizuno</a>
                     </li>
                     <li class="footer__list-item">
-                        <a href="" class="footer__list-item-link">ASUS</a>
+                        <a href="" class="footer__list-item-link">Puma</a>
                     </li>
                 </ul>
             </div>
@@ -75,7 +75,7 @@
             </div>
         </div>
         <div class="row">
-            <p class="footer__text">@ 2021 - Copyright belongs to software solutions company H-Shop by QuocHuy's Developer Website </p>
+            <p class="footer__text">@ 2021 - Copyright belongs to software solutions company PhucSports Store </p>
         </div>
     </div>
 </footer>

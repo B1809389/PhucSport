@@ -196,7 +196,7 @@
             </div>
         </div>
 
-        <?php require './assets/sidebar/footer.php'; ?>
+        <?php //require './assets/sidebar/footer.php'; ?>
     </div>
 
     <!-- Sau div toan trang la Modal -->

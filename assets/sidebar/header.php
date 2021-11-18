@@ -2,20 +2,13 @@
 session_start();
 ?>
 <header class="header">
-    <div class="grid wide">
+    <div class="grid">
         <div class="row">
             <!-- <div class="col l-12">
                 </div> -->
             <div class="header__top">
                 <div class="header__top-logo">
-                    <h1 class="header__top-logo-text"> <span class="header__top-logo-text-color" style="color: #58b0d9">Rabbit</span> Shop</h1>
-                    <div class="header__top-logo-qr-wrap">
-                        <img src="./assets/image/qr_web.png" alt="QR Code" class="header__qr-img">
-                        <div class="header__qr-apps">
-                            <a href="" class="header__qr-link"><img src="./assets/image/QR_Appstore.png" alt="App Store" class="header__qr-download-img"></a>
-                            <a href="" class="header__qr-link"><img src="./assets/image/QR_GooglePlay.png" alt="Google Play" class="header__qr-download-img"></a>
-                        </div>
-                    </div>
+                    <h1 class="header__top-logo-text"> <span class="header__top-logo-text-color" style="color: #edd65d">Phuc</span> Sports</h1>
                 </div>
                 <div class="header__top-action">
                     <?php
@@ -27,8 +20,8 @@ session_start();
                     ?>
                     <div class="header__top-register__login-wrap">
                         <div class="header__top-action-sign">
-                            <div class="header__top-register"><a href="./register_login.php?action=register" class="header__top-action-sign-link">Register</a></div>
-                            <div class="header__top-login"><a href="./register_login.php?action=login" class="header__top-action-sign-link">Sign In</a></div>
+                            <div class="header__top-register"><a href="./register_login.php?action=register" class="header__top-action-sign-link">ĐĂNG KÝ</a></div>
+                            <div class="header__top-login"><a href="./register_login.php?action=login" class="header__top-action-sign-link">ĐĂNG NHẬP</a></div>
                         </div>
 
                         <div class="header__top-action-signed">
@@ -115,11 +108,11 @@ session_start();
                         }
                         ?>
                     </div>
-                    
+
                     <div class="header__top-responsive-navbar-menu-wrap">
-                    <button class='bars' type="button"><i class="header__top-responsive-navbar-menu-icon fas fa-bars"></i></button>           
+                        <button class='bars' type="button"><i class="header__top-responsive-navbar-menu-icon fas fa-bars"></i></button>
                         <div class="header__top-responsive-navbar-menu-wrap-none">
-                            
+
                             <div class="header__top-responsive-navbar-menu-wrap-none-search">
                                 <input type="text" class="header__bottom-search-input__responsive">
                                 <button class="header__bottom-search-button__responsive">Search</button>
@@ -132,6 +125,7 @@ session_start();
                                     echo '<style>.header__top-responsive-navbar-menu-wrap-none-not-login{display:flex;}</style>';
                                 }
                                 ?>
+
                                 <div class="header__top-responsive-navbar-menu-wrap-none-not-login">
                                     <a href="./register_login.php?action=register" class="header__top-responsive-navbar-menu-wrap-none-login-link">Register</a>
                                     <a href="./register_login.php?action=login" class="header__top-responsive-navbar-menu-wrap-none-login-link">Sign In</a>
@@ -146,6 +140,11 @@ session_start();
                                                                                     }
                                                                                     ?></div>
                                     </a>
+
+                                    <a href="./logout.php" class="header__top-responsive-navbar-menu-wrap-none-signed-link">
+                                        <i class="fas fa-sign-out-alt"></i> Sign Out
+                                    </a>
+
                                 </div>
                             </div>
                             <div class="header__top-responsive-navbar-menu-wrap-none-menu">
@@ -165,11 +164,7 @@ session_start();
                                     <li class="header__top-responsive-navbar-menu-wrap-none-menu-item color-blue-main"><i class="far fa-address-book"></i> Contact</li>
                                 </ul>
                             </div>
-                            <div class="header__top-responsive-navbar-menu-wrap-none-footer">
-                                <a href="./logout.php" class="header__top-responsive-navbar-menu-wrap-none-signed-link">
-                                    <i class="fas fa-sign-out-alt"></i> Sign Out
-                                </a>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -177,56 +172,60 @@ session_start();
             <div class="header__bottom hide-on-mobile-tablet">
                 <div class="header__bottom-navbar">
                     <div class="header__bottom-navbar-menu"> <a href="./index.php" class="header__bottom-navbar-menu-link"><i class="fas fa-home"></i></a></div>
-                    <div class="header__bottom-navbar-menu">CATEGORIES
+                    <div class="header__bottom-navbar-menu">TẤT CẢ SẢN PHẨM &nbsp; <i class="fa fa-chevron-down" aria-hidden="true"></i>
                         <div class="header__bottom-navbar-menu-none">
                             <ul class="header__bottom-navbar-menu-none-list">
-                                <li class="header__bottom-navbar-menu-none-item"><i class="fab fa-apple"></i> APPLE
-                                    <h4><i class="list__list-icon fas fa-chevron-circle-right"></i> iPhone</h4>
+                                <li class="header__bottom-navbar-menu-none-item">
+                                    <h4 class="header__bottom-navbar-menu-none-item--brand">NIKE</h4>
+                                    <h4><i class="list__list-icon fas fa-chevron-circle-right"></i> GIÀY CỎ TỰ NHIÊN</h4>
 
                                     <ul class="list__list">
-                                        <li class="list__list-item"><i class="fas fa-mobile-alt"></i> iPhone 12</li>
-                                        <li class="list__list-item"><i class="fas fa-mobile-alt"></i> iPhone 11</li>
-                                        <li class="list__list-item"><i class="fas fa-mobile-alt"></i> iPhone X</li>
+                                        <li class="list__list-item">NIKE MERCURIAL</li>
+                                        <li class="list__list-item">NIKE PHANTOM</li>
+                                        <li class="list__list-item">NIKE TIEMPO</li>
                                     </ul>
-                                    <h4><i class="list__list-icon fas fa-chevron-circle-right"></i> Apple Watch</h4>
+                                    <h4><i class="list__list-icon fas fa-chevron-circle-right"></i> GIÀY CỎ NHÂN TẠO & FUTSAL</h4>
                                     <ul class="list__list">
-                                        <li class="list__list-item">Series 5</li>
-                                        <li class="list__list-item">Series 6</li>
+                                        <li class="list__list-item">NIKE MERCURIAL</li>
+                                        <li class="list__list-item">NIKE MERCURIAL</li>
                                     </ul>
                                 </li>
-                                <li class="header__bottom-navbar-menu-none-item">SAMSUNG
-                                    <h4><i class="list__list-icon fas fa-chevron-circle-right"></i> Samsung Galaxy</h4>
+                                <li class="header__bottom-navbar-menu-none-item">
+                                    <h4 class="header__bottom-navbar-menu-none-item--brand">ADIDAS</h4>
+                                    <h4><i class="list__list-icon fas fa-chevron-circle-right"></i>GIÀY CỎ NHÂN TẠO & FUTSAL</h4>
 
                                     <ul class="list__list">
-                                        <li class="list__list-item"><i class="fas fa-mobile-alt"></i> Galaxy Fold</li>
-                                        <li class="list__list-item"><i class="fas fa-mobile-alt"></i> Galaxy S21</li>
-                                        <li class="list__list-item"><i class="fas fa-mobile-alt"></i> Galaxy S10</li>
+                                        <li class="list__list-item">ADIDAS X</li>
+                                        <li class="list__list-item">ADIDAS COPA</li>
+                                        <li class="list__list-item">ADIDAS NEMEZIZ</li>
+                                        <li class="list__list-item">ADIDAS PREDATOR</li>
                                     </ul>
-                                    <h4><i class="list__list-icon fas fa-chevron-circle-right"></i> Samsung Watch</h4>
+
+                                </li>
+                                <li class="header__bottom-navbar-menu-none-item">
+                                    <h4 class="header__bottom-navbar-menu-none-item--brand">PUMA</h4>
                                     <ul class="list__list">
-                                        <li class="list__list-item">Galaxy Watch 3</li>
-                                        <li class="list__list-item">Galaxy Active 2</li>
-                                        <li class="list__list-item">Galaxy Fit</li>
+                                        <li class="list__list-item">PUMA ULTRA</li>
+                                        <li class="list__list-item">PUMA FUTURE</li>
+                                        <li class="list__list-item">PUMA ONE</li>
                                     </ul>
                                 </li>
-                                <li class="header__bottom-navbar-menu-none-item">OPPO
+                                <li class="header__bottom-navbar-menu-none-item">
+                                    <h4 class="header__bottom-navbar-menu-none-item--brand">MIZUNO</h4>
                                     <ul class="list__list">
-                                        <li class="list__list-item"><i class="fas fa-mobile-alt"></i> Oppo Reno 5</li>
-                                        <li class="list__list-item"><i class="fas fa-mobile-alt"></i> Oppo Reno 4Pro</li>
-                                        <li class="list__list-item"><i class="fas fa-mobile-alt"></i> Oppo Limited</li>
-                                    </ul>
-                                </li>
-                                <li class="header__bottom-navbar-menu-none-item">ASUS
-                                    <ul class="list__list">
-                                        <li class="list__list-item"><i class="fas fa-mobile-alt"></i> Asus ROG 3</li>
-                                        <li class="list__list-item"><i class="fas fa-mobile-alt"></i> Asus ROG 1</li>
+                                        <li class="list__list-item">MIZUNO MORELIA</li>
+                                        <li class="list__list-item">MIZUNO MONARCIDA</li>
+                                        <li class="list__list-item">MIZUNO REBULA</li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="header__bottom-navbar-menu">BLOG</div>
-                    <div class="header__bottom-navbar-menu">ABOUT US</div>
+                    <div class="header__bottom-navbar-menu">TIN TỨC GIÀY</div>
+                    <div class="header__bottom-navbar-menu">HỆ THỐNG CỬA HÀNG</div>
+                    <div class="header__bottom-navbar-menu">SALE OFF</div>
+                    <div class="header__bottom-navbar-menu">HƯỚNG DẪN ĐẶT HÀNG</div>
+                    <div class="header__bottom-navbar-menu">LIÊN HỆ</div>
                 </div>
                 <div class="header__bottom-search">
                     <!-- <input type="text" placeholder="Search" class="header__bottom-search-input"> -->

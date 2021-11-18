@@ -7,9 +7,9 @@
     <li class="pagination-item pagination-item--active">
         <a href="" class="pagination-item__link">1</a>
     </li>
-    <li class="pagination-item">
+    <!-- <li class="pagination-item">
         <a href="" class="pagination-item__link">2</a>
-    </li>
+    </li> -->
     <!-- <li class="pagination-item">
         <a href="" class="pagination-item__link">3</a>
     </li>

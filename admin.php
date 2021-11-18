@@ -43,7 +43,7 @@
                             </h3>
                             <ul class="category-list">
                                 <li class="category-item">
-                                    <a href="./admin.php" class="category-item-active category-item-link">Dashboard</a>
+                                    <a onclick="ok()" href="./admin.php" class="category-item-active category-item-link">Dashboard</a>
                                 </li>
                                 <li class="category-item">
                                     <a href="./product_manage.php" class="category-item-link">Product Manage</a>
@@ -152,6 +152,12 @@
     </div>
 
     <!-- Sau div toan trang la Modal -->
+    <script>
+        // function ok(){
+        //     var test = document.getElementById('demo');
+        //     test.setAttribute('class' )
+        // }
+    </script>
 </body>
 
 </html>

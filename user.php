@@ -35,7 +35,7 @@
                             </h3>
                             <ul class="category-list">
                                 <li class="category-item">
-                                    <a href="./user.php?action=info" class="category-item-active category-item-link">User Information</a>
+                                    <a id="demo" href="./user.php?action=info" class="category-item-link">User Information</a>
                                 </li>
                                 <!-- <li class="category-item">
                                     <a href="./history.php" class="category-item-link">Order Manage</a>
@@ -240,6 +240,19 @@
     </div>
 
     <!-- Sau div toan trang la Modal -->
+    <script type="text/javascript">
+        // function ok() {
+        //     var test = document.querySelector('.category-item-link');
+        //     setTimeout(()=>{
+        //         test.classList.toggle('category-item-active');
+        //     },1000)
+        // }
+        $(document).ready(function(){
+            $("a").click(function(){
+            $("category-item-link").toggleClass("category-item-active");
+            });
+        });
+    </script>
 </body>
 <?php ob_flush() ?>
 

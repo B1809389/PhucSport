@@ -1,11 +1,10 @@
 <div class="home-filter hide-on-mobile-tablet">
     <!-- <span class="home-filter__label">Sort</span> -->
-    <button class="home-filter__btn btn btn--primary">Popular</button>
-    <button class="home-filter__btn btn btn--normal">Latest</button>
-    <button class="home-filter__btn btn">Best sale</button>
+    <button class="home-filter__btn btn btn--primary">Tất cả sản phẩm</button>
+    <button class="home-filter__btn btn">Bán chạy nhất</button>
 
     <div class="select-input">
-        <span class="select-input__label">Product</span>
+        <span class="select-input__label">Lọc theo sản phẩm</span> &nbsp;
         <i class="select-input__icon fas fa-chevron-down"></i>
 
         <ul class="select-input__list">
@@ -13,21 +12,21 @@
                 <a href="./index.php" class="select-input__link">All Product</a>
             </li>
             <li class="select-input__item">
-                <a href="./index.php?action=AP" class="select-input__link">Apple</a>
+                <a href="./index.php?action=AP" class="select-input__link">Nike</a>
             </li>
             <li class="select-input__item">
-                <a href="./index.php?action=SS" class="select-input__link">Samsung</a>
+                <a href="./index.php?action=SS" class="select-input__link">Adidas</a>
             </li>
             <li class="select-input__item">
-                <a href="./index.php?action=AS" class="select-input__link">Asus</a>
+                <a href="./index.php?action=AS" class="select-input__link">Puma</a>
             </li>
             <li class="select-input__item">
-                <a href="./index.php?action=OP" class="select-input__link">Oppo</a>
+                <a href="./index.php?action=OP" class="select-input__link">Mizuno</a>
             </li>
         </ul>
     </div>
 
-    <div class="select-input">
+    <!-- <div class="select-input">
         <span class="select-input__label">Price</span>
         <i class="select-input__icon fas fa-chevron-down"></i>
 
@@ -39,7 +38,7 @@
                 <a href="./index.php?action=high" class="select-input__link">High to low price</a>
             </li>
         </ul>
-    </div>
+    </div> -->
 
     <div class="home-filter__page">
         <span class="home-filter__page-number">
