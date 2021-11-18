@@ -2,7 +2,7 @@
 $host="localhost";
 $user="root";
 $password="";
-$database="duybui";
+$database="phucsport";
 $con=mysqli_connect($host,$user,$password,$database);
 
 if(mysqli_connect_error()){
