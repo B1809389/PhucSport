@@ -81,13 +81,13 @@
                             <?php
                             $id = 1;
                             include './assets/php/connect_db.php';
-                            $result = mysqli_query($con, "select * from hanghoa");
+                            $result = mysqli_query($con, "select * from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH");
                             mysqli_close($con);
                             while ($row = mysqli_fetch_array($result)) {
                             ?>
                                 <tr class="table__content">
                                     <td class="table__td-id"><?= $id++ ?></td>
-                                    <td class="table__td-image"><img src="<?= $row['HinhAnh'] ?>" alt="" class="td-img"></td>
+                                    <td class="table__td-image"><img src="<?= $row['TenHinh'] ?>" alt="" class="td-img"></td>
                                     <td class="table__td-name"><?= $row['TenHH'] ?></td>
                                     <td class="table__td-idproduct"><?= $row['MSHH'] ?></td>
                                     <td class="table__td-quantity"><?= $row['SoLuongHang'] ?></td>

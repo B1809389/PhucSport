@@ -34,9 +34,9 @@ session_start();
 
                             <div class="header__top-action-signed-wrap">
                                 <ul class="header__top-action-signed-wrap-list">
-                                    <li class="header__top-action-signed-wrap-item"><a href="./user.php" class="header__top-action-signed-wrap-item-link"><i class="fas fa-user-edit"></i> Account</a></li>
-                                    <li class="header__top-action-signed-wrap-item"><a href="./history.php" class="header__top-action-signed-wrap-item-link"><i class="fas fa-history"></i> History</a></li>
-                                    <li class="header__top-action-signed-wrap-item"><a href="./logout.php" class="header__top-action-signed-wrap-item-link"><i class="fas fa-sign-out-alt"></i> Sign Out</a></li>
+                                    <li class="header__top-action-signed-wrap-item"><a href="./user.php" class="header__top-action-signed-wrap-item-link"><i class="fas fa-user-edit"></i> Quản lý tài khoản</a></li>
+                                    <li class="header__top-action-signed-wrap-item"><a href="./history.php" class="header__top-action-signed-wrap-item-link"><i class="fas fa-history"></i> Lịch sử mua hàng</a></li>
+                                    <li class="header__top-action-signed-wrap-item"><a href="./logout.php" class="header__top-action-signed-wrap-item-link"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -58,7 +58,7 @@ session_start();
                                                                 ?></div>
 
                         <div class="header__top-cart-wrap--no-cart">
-                            <img src="./assets/image/no_cart.png" alt="" class="header__top-cart-wrap-img">
+                            <img src="./assets/image/giohang.png" alt="" class="header__top-cart-wrap-img">
                         </div>
                         <?php
                         if (isset($_SESSION['cart'])) {
@@ -109,64 +109,6 @@ session_start();
                         ?>
                     </div>
 
-                    <div class="header__top-responsive-navbar-menu-wrap">
-                        <button class='bars' type="button"><i class="header__top-responsive-navbar-menu-icon fas fa-bars"></i></button>
-                        <div class="header__top-responsive-navbar-menu-wrap-none">
-
-                            <div class="header__top-responsive-navbar-menu-wrap-none-search">
-                                <input type="text" class="header__bottom-search-input__responsive">
-                                <button class="header__bottom-search-button__responsive">Search</button>
-                            </div>
-                            <div class="header__top-responsive-navbar-menu-wrap-none-login">
-                                <?php
-                                if (isset($_SESSION['user'])) {
-                                    echo '<style>.header__top-responsive-navbar-menu-wrap-none-signed{display:flex;}</style>';
-                                } else {
-                                    echo '<style>.header__top-responsive-navbar-menu-wrap-none-not-login{display:flex;}</style>';
-                                }
-                                ?>
-
-                                <div class="header__top-responsive-navbar-menu-wrap-none-not-login">
-                                    <a href="./register_login.php?action=register" class="header__top-responsive-navbar-menu-wrap-none-login-link">Register</a>
-                                    <a href="./register_login.php?action=login" class="header__top-responsive-navbar-menu-wrap-none-login-link">Sign In</a>
-                                </div>
-
-                                <div class="header__top-responsive-navbar-menu-wrap-none-signed">
-                                    <a href="./user.php" class="header__top-responsive-navbar-menu-wrap-none-signed-link">
-                                        <i class="header__top-sign-in-icon fas fa-user-circle"></i>
-                                        <div class="header__top-sign-in-user-name"><?php
-                                                                                    if (isset($_SESSION['user'])) {
-                                                                                        echo $_SESSION['user'];
-                                                                                    }
-                                                                                    ?></div>
-                                    </a>
-
-                                    <a href="./logout.php" class="header__top-responsive-navbar-menu-wrap-none-signed-link">
-                                        <i class="fas fa-sign-out-alt"></i> Sign Out
-                                    </a>
-
-                                </div>
-                            </div>
-                            <div class="header__top-responsive-navbar-menu-wrap-none-menu">
-                                <ul class="header__top-responsive-navbar-menu-wrap-none-menu-list">
-                                    <li class="header__top-responsive-navbar-menu-wrap-none-menu-item color-blue-main"><i class="fas fa-home"></i> Home</li>
-                                    <li class="header__top-responsive-navbar-menu-wrap-none-menu-item color-blue-main"><i class="fas fa-list"></i> Categories
-                                        <ul class="header__top-responsive-navbar-menu-wrap-none-menu-list color-white-main">
-                                            <li class="header__top-responsive-navbar-menu-wrap-none-menu-item"><i class="fas fa-mobile-alt"></i> Apple</li>
-                                            <li class="header__top-responsive-navbar-menu-wrap-none-menu-item"><i class="fas fa-mobile-alt"></i> Samsung</li>
-                                            <li class="header__top-responsive-navbar-menu-wrap-none-menu-item"><i class="fas fa-mobile-alt"></i> Oppo</li>
-                                            <li class="header__top-responsive-navbar-menu-wrap-none-menu-item"><i class="fas fa-mobile-alt"></i> Asus</li>
-                                            <li class="header__top-responsive-navbar-menu-wrap-none-menu-item"><i class="fas fa-border-all"></i> Other</li>
-                                        </ul>
-                                    </li>
-                                    <li class="header__top-responsive-navbar-menu-wrap-none-menu-item color-blue-main"><i class="far fa-edit"></i> Blog</li>
-                                    <li class="header__top-responsive-navbar-menu-wrap-none-menu-item color-blue-main"><i class="fas fa-shopping-bag"></i><a href="./history.php" class="header__top-responsive-navbar-menu-wrap-none-history-link"> History</a></li>
-                                    <li class="header__top-responsive-navbar-menu-wrap-none-menu-item color-blue-main"><i class="far fa-address-book"></i> Contact</li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="header__bottom hide-on-mobile-tablet">
@@ -180,14 +122,14 @@ session_start();
                                     <h4><i class="list__list-icon fas fa-chevron-circle-right"></i> GIÀY CỎ TỰ NHIÊN</h4>
 
                                     <ul class="list__list">
-                                        <li class="list__list-item">NIKE MERCURIAL</li>
-                                        <li class="list__list-item">NIKE PHANTOM</li>
-                                        <li class="list__list-item">NIKE TIEMPO</li>
+                                    <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item--link">NIKE MERCURIAL</a></li>
+                                        <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item--link">NIKE PHANTOM</a></li>
+                                        <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item--link">NIKE TIEMPO</a></li>
                                     </ul>
                                     <h4><i class="list__list-icon fas fa-chevron-circle-right"></i> GIÀY CỎ NHÂN TẠO & FUTSAL</h4>
                                     <ul class="list__list">
-                                        <li class="list__list-item">NIKE MERCURIAL</li>
-                                        <li class="list__list-item">NIKE MERCURIAL</li>
+                                        <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item--link">NIKE MERCURIAL</a></li>
+                                        <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item--link">NIKE TIEMPO</a></li>
                                     </ul>
                                 </li>
                                 <li class="header__bottom-navbar-menu-none-item">
@@ -195,27 +137,47 @@ session_start();
                                     <h4><i class="list__list-icon fas fa-chevron-circle-right"></i>GIÀY CỎ NHÂN TẠO & FUTSAL</h4>
 
                                     <ul class="list__list">
-                                        <li class="list__list-item">ADIDAS X</li>
-                                        <li class="list__list-item">ADIDAS COPA</li>
-                                        <li class="list__list-item">ADIDAS NEMEZIZ</li>
-                                        <li class="list__list-item">ADIDAS PREDATOR</li>
+                                        <li class="list__list-item">
+                                            <a href="./index.php?action=AD" class="list__list-item--link">ADIDAS X</a>
+                                        </li>
+                                        <li class="list__list-item">
+                                            <a href="./index.php?action=AD" class="list__list-item--link">ADIDAS COPA</a>
+                                        </li>
+                                        <li class="list__list-item">
+                                            <a href="./index.php?action=AD" class="list__list-item--link">ADIDAS NEMEZIZ</a>
+                                        </li>
+                                        <li class="list__list-item">
+                                            <a href="./index.php?action=AD" class="list__list-item--link">ADIDAS PREDATOR</a>
+                                        </li>
                                     </ul>
 
                                 </li>
                                 <li class="header__bottom-navbar-menu-none-item">
                                     <h4 class="header__bottom-navbar-menu-none-item--brand">PUMA</h4>
                                     <ul class="list__list">
-                                        <li class="list__list-item">PUMA ULTRA</li>
-                                        <li class="list__list-item">PUMA FUTURE</li>
-                                        <li class="list__list-item">PUMA ONE</li>
+                                        <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item"></a>
+                                            <a href="./index.php?action=PM" class="list__list-item--link">PUMA ULTRA</a>
+                                        </li>
+                                        <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item"></a>
+                                            <a href="./index.php?action=PM" class="list__list-item--link">PUMA FUTURE</a>
+                                        </li>
+                                        <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item"></a>
+                                            <a href="./index.php?action=PM" class="list__list-item--link">PUMA ONE</a>
+                                        </li>
                                     </ul>
                                 </li>
                                 <li class="header__bottom-navbar-menu-none-item">
                                     <h4 class="header__bottom-navbar-menu-none-item--brand">MIZUNO</h4>
                                     <ul class="list__list">
-                                        <li class="list__list-item">MIZUNO MORELIA</li>
-                                        <li class="list__list-item">MIZUNO MONARCIDA</li>
-                                        <li class="list__list-item">MIZUNO REBULA</li>
+                                        <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item"></a>
+                                            <a href="./index.php?action=MZ" class="list__list-item--link">MIZUNO MORELIA</a>
+                                        </li>
+                                        <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item"></a>
+                                            <a href="./index.php?action=MZ" class="list__list-item--link">MIZUNO MONARCIDA</a>
+                                        </li>
+                                        <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item"></a>
+                                            <a href="./index.php?action=MZ" class="list__list-item--link">MIZUNO REBULA</a>
+                                        </li>
                                     </ul>
                                 </li>
                             </ul>

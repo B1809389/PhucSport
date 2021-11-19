@@ -79,26 +79,25 @@
                         <div class="auth-form__register-container">
                             <!-- Header -->
                             <div class="auth-form__header">
-                                <h3 class="auth-form__heading">Register</h3>
-                                <span class="auth-form__heading-btn"><a href="./register_login.php?action=login" class="auth-form__heading-btn-link">Log In</a></span>
+                                <h3 class="auth-form__heading">ĐĂNG KÝ</h3>
                             </div>
                             <!-- Content -->
                             <form class="auth-form__form" method="POST" action="">
-                                <br> <input type="text" name="txtHoTenKH" class="auth-form__input" placeholder="Full Name">
-                                <br> <input type="text" name="txtTenCongTy" class="auth-form__input" placeholder="Company Name">
-                                <br> <input type="text" name="txtSoDienThoai" class="auth-form__input" placeholder="Phone Number">
+                                <br> <input type="text" name="txtHoTenKH" class="auth-form__input" placeholder="Họ và tên">
+                                <br> <input type="text" name="txtTenCongTy" class="auth-form__input" placeholder="Tên Đơn vị hoặc Công ty">
+                                <br> <input type="text" name="txtSoDienThoai" class="auth-form__input" placeholder="Số điện thoại">
                                 <br> <input type="text" name="txtEmail" class="auth-form__input" placeholder="Email">
-                                <br> <input type="text" name="txtUser" class="auth-form__input" placeholder="User Name">
-                                <br> <input type="password" name="txtPassword" class="auth-form__input" placeholder="Password">
+                                <br> <input type="text" name="txtUser" class="auth-form__input" placeholder="Tên đăng nhập">
+                                <br> <input type="password" name="txtPassword" class="auth-form__input" placeholder="Mật khẩu 6 - 8 ký tự">
                                 <div class="auth-form__aside">
                                     <p class="auth-form__policy-text">
-                                        Complete register, is agree about
-                                        <a href="" class="auth-form__policy-link">Terms of Service</a> and
-                                        <a href="" class="auth-form__policy-link">Privacy</a>
+                                        Hoàn thành đăng ký, bạn có đồng ý về
+                                        <a href="" class="auth-form__policy-link">Chính sách dịch vụ</a> và
+                                        <a href="" class="auth-form__policy-link">Bảo mật</a>
                                     </p>
                                 </div>
                                 <!-- Button -->
-                                <input class="btn btn--primary" type="submit" name="submit" value="REGISTER">
+                                <input class="btn btn--primary" type="submit" name="submit" value="ĐĂNG KÝ">
                             </form>
                             <!-- Services -->
                             <!-- Social -->
@@ -159,25 +158,24 @@
                         <div class="auth-form__login-container">
                             <!-- Header -->
                             <div class="auth-form__header">
-                                <h3 class="auth-form__heading">Log In</h3>
-                                <span class="auth-form__heading-btn"><a href="./register_login.php?action=register" class="auth-form__heading-btn-link">Register</a></span>
+                                <h3 class="auth-form__heading">ĐĂNG NHẬP</h3>
                             </div>
                             <!-- Content -->
                             <form class="auth-form__form" method="POST">
-                                <h4 class="text"><b>User:</b></h4>
+                                <h4 class="text"><b>Tên tài khoản:</b></h4>
                                 <br> <input type="text" name="user" class="auth-form__input-login">
-                                <h4 class="text"><b>Password:</b></h4>
+                                <h4 class="text"><b>Mật khẩu:</b></h4>
                                 <br> <input type="password" name="password" class="auth-form__input-login">
                                 <!-- Services -->
                                 <div class="auth-form__aside">
                                     <p class="auth-form__policy-text">
                                         <!-- <span class="auth-form__policy-link">Terms of Service</span> and <span class="auth-form__policy-link">Privacy</span> -->
-                                        <a href="" class="auth-form__policy-link">Forget Password ?</a>
+                                        <a href="" class="auth-form__policy-link">Quên mật khẩu ?</a>
                                     </p>
                                 </div>
                                 <!-- Button -->
                                 <!-- <div class="auth-form__login-controls"> -->
-                                <input class="btn-login" type="submit" name="login" value="LOG IN">
+                                <input class="btn-login" type="submit" name="login" value="ĐĂNG NHẬP">
                                 <!-- </div> -->
                             </form>
                             <!-- Social -->

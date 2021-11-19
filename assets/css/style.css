@@ -212,12 +212,14 @@ body {
 .footer {
   padding-top: 12px;
   border-top: 4px solid var(--primary-color);
+  background-color: #3b3b3b;
+  color: #fff;
 }
 
 .footer__heading {
   font-size: 1.2rem;
   font-weight: 500;
-  color: var(--text-color);
+  color: #fff;
 }
 
 .footer__list {
@@ -227,7 +229,7 @@ body {
 
 .footer__list-item-link {
   text-decoration: none;
-  color: var(--text-color);
+  color: #fff;
   font-size: 1.2rem;
   padding: 2px 0;
   display: flex;
@@ -399,6 +401,7 @@ body {
 
 .header__top-logo-text {
   margin: 0;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 .header__top-logo-text:hover {
@@ -1150,7 +1153,9 @@ i.home-product-item__like-icon-fill {
 .auth-form__heading {
   color: #333;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
+  font-family: monospace;
+  text-decoration: underline;
 }
 
 .auth-form__heading-btn {
@@ -1925,6 +1930,16 @@ tr:hover {
   color: #edd65d;
 }
 
+.list__list-item--link {
+  list-style: none;
+  text-decoration: none;
+  color: #fff;
+}
+
+.list__list-item--link:hover {
+  color: #edd65d;
+}
+
 .list__list-icon {
   color: #edd65d;
 }
@@ -2058,4 +2073,10 @@ tr:hover {
 
 .empty-heart {
   display: block;
+}
+
+
+.alert__none-product{
+  width: 100%;
+  text-align: center;
 }

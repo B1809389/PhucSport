@@ -60,16 +60,16 @@
                                 if (isset($_GET['action'])) {
                                     $action = $_GET['action'];
 
-                                    if ($action == 'AP') {
+                                    if ($action == 'NK') {
                                         $sql = "select TenHH, TenHinh, Gia_Cu, Gia, MaLoaiHang from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH AND MaLoaiHang='$action'";
                                     }
-                                    if ($action == 'SS') {
+                                    if ($action == 'AD') {
                                         $sql = "select TenHH, TenHinh, Gia_Cu, Gia, MaLoaiHang from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH AND MaLoaiHang='$action'";
                                     }
-                                    if ($action == 'OP') {
+                                    if ($action == 'PM') {
                                         $sql = "select TenHH, TenHinh, Gia_Cu, Gia, MaLoaiHang from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH AND MaLoaiHang='$action'";
                                     }
-                                    if ($action == 'AS') {
+                                    if ($action == 'MZ') {
                                         $sql = "select TenHH, TenHinh, Gia_Cu, Gia, MaLoaiHang from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH AND MaLoaiHang='$action'";
                                     }
                                     if ($action == 'low') {
@@ -78,9 +78,22 @@
                                     if ($action == 'high') {
                                         $sql = "select TenHH, TenHinh, Gia_Cu, Gia, MaLoaiHang from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH order by Gia desc";
                                     }
+                                    if ($action == 'tunhien') {
+                                        $sql = "select TenHH, TenHinh, Gia_Cu, Gia, MaLoaiHang from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH AND Gia >= 3000000";
+                                    }
+                                    if ($action == 'nhantao') {
+                                        $sql = "select TenHH, TenHinh, Gia_Cu, Gia, MaLoaiHang from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH AND Gia <= 2000000";
+                                    }
+                                    if ($action == 'futsal') {
+                                        $sql = "select TenHH, TenHinh, Gia_Cu, Gia, MaLoaiHang from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH AND Gia BETWEEN 0 AND 2000000";
+                                    }
 
                                     //$sql = "select * from hanghoa";
                                     $result = mysqli_query($con, $sql);
+                                    $check = mysqli_fetch_array($result);
+                                    if($check == 0){
+                                        echo '<h3 class="alert__none-product">Không có sản phẩm nào</h3>';
+                                    }
                                     while ($row = mysqli_fetch_array($result)) { ?>
                                         <div class="col l-2-4 m-4 c-6">
                                             <a href="./product.php?MLH= <?= $row['MaLoaiHang'] ?>&id=<?= $row['TenHH'] ?>" class="home-product__link">

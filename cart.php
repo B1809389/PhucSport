@@ -43,7 +43,7 @@
             } else {
                 $_SESSION['cart'][$ms]['sl'] = 1;
                 $_SESSION['cart'][$ms]['name'] = $row['TenHH'];
-                $_SESSION['cart'][$ms]['image'] = $row['HinhAnh'];
+                $_SESSION['cart'][$ms]['image'] = $row['TenHinh'];
                 $_SESSION['cart'][$ms]['price'] = $row['Gia'];
                 $_SESSION['cart'][$ms]['ms'] = $row['MSHH'];
             }
