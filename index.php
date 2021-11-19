@@ -48,16 +48,16 @@
                                     $action = $_GET['action'];
 
                                     if ($action == 'NK') {
-                                        $sql = "select * from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH AND MaLoaiHang='$action'";
+                                        $sql = "select * from hanghoa as a, hinhhanghoa as b where MaLoaiHang='$action' AND a.MSHH = b.MSHH";
                                     }
                                     if ($action == 'AD') {
-                                        $sql = "select * from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH AND MaLoaiHang='$action'";
+                                        $sql = "select * from hanghoa as a, hinhhanghoa as b where MaLoaiHang='$action' AND a.MSHH = b.MSHH";
                                     }
                                     if ($action == 'PM') {
-                                        $sql = "select * from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH AND MaLoaiHang='$action'";
+                                        $sql = "select * from hanghoa as a, hinhhanghoa as b where MaLoaiHang='$action' AND a.MSHH = b.MSHH";
                                     }
                                     if ($action == 'MZ') {
-                                        $sql = "select * from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH AND MaLoaiHang='$action'";
+                                        $sql = "select * from hanghoa as a, hinhhanghoa as b where MaLoaiHang='$action' AND a.MSHH = b.MSHH";
                                     }
                                     if ($action == 'low') {
                                         $sql = "select * from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH order by Gia asc";
@@ -66,15 +66,11 @@
                                         $sql = "select * from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH order by Gia desc";
                                     }
                                     if ($action == 'best') {
-                                        $sql = "select * from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH AND a.SoLuongHang <= 10";
+                                        $sql = "select * from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH AND a.SoLuongHang < 10";
                                     }
 
                                     //$sql = "select * from hanghoa";
                                     $result = mysqli_query($con, $sql);
-                                    $check = mysqli_fetch_array($result);
-                                    if ($check == 0) {
-                                        echo '<h3 class="alert__none-product">Không có sản phẩm nào</h3>';
-                                    }
                                     while ($row = mysqli_fetch_array($result)) { ?>
                                         <div class="col l-2-4 m-4 c-6">
                                             <a href="./product.php?MLH= <?= $row['MaLoaiHang'] ?>&id=<?= $row['TenHH'] ?>" class="home-product__link">
@@ -105,10 +101,9 @@
                                                 </div>
                                             </a>
                                         </div>
-                                    <?php
+                                        <?php
                                     }
                                 } else {
-                                    // $sql = "select * from hanghoa order by Gia desc";
                                     $sql = "select * from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH";
                                     $result = mysqli_query($con, $sql);
                                     while ($row = mysqli_fetch_array($result)) { ?>
