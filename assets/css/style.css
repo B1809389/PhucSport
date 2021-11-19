@@ -339,9 +339,9 @@ body {
 
 .header {
   height: 140px;
-  /* width: 100%; */
-
   background-color: #fff;
+  /* position:fixed;
+  z-index: 10; */
 }
 
 .header__top {
@@ -1100,41 +1100,6 @@ i.home-product-item__like-icon-fill {
   margin: 0 3px 0 4px;
 }
 
-/* .home-product-item__sale-off {
-    position: absolute;
-    right: 0;
-    top: 0;
-    background-color: rgba(255, 216, 64, 0.92);
-    width: 40px;
-    height: 40px;
-    text-align: center;
-}
-
-.home-product-item__sale-off::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: -10px;
-    border-width: 0 20px 10px;
-    border-style: solid;
-    border-color: transparent rgba(255, 216, 64, 0.92) transparent rgba(255, 216, 64, 0.92);
-}
-
-.home-product-item__sale-off-percent {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--primary-color);
-    line-height: 0.9rem;
-}
-
-.home-product-item__sale-off-label {
-    font-size: 0.9rem;
-    font-weight: 500;
-    color: var(--white-color);
-    line-height: 0.9rem;
-    position: relative;
-    top: -4px;
-} */
 
 /* Auth-form-CSS */
 
@@ -1461,8 +1426,10 @@ i.home-product-item__like-icon-fill {
   margin: 5px 0;
 }
 
-.cart__form__input:last-child {
+.cart__form__input-text {
+  width: 100%;
   height: 200px;
+  margin: 5px 0;
 }
 
 .cart__form__btn {
@@ -1483,6 +1450,7 @@ i.home-product-item__like-icon-fill {
 .app_container {
   background-color: var(--white-color);
   margin-bottom: 20px;
+  /* padding-top: 120px; */
 }
 
 .app__content {

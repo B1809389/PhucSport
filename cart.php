@@ -182,8 +182,8 @@
                             <!-- <br> <input type="text" name="txtMS" class="cart__form__input" placeholder="ID User"> -->
                             <br> <input type="text" name="txtHoTen" class="cart__form__input" placeholder="Full Name">
                             <br> <input type="text" name="txtSoDienThoai" class="cart__form__input" placeholder="Phone Number">
-                            <br> <input type="text" name="txtDiaChi" class="cart__form__input" placeholder="Address">
-                            <br> <input type="submit" name="submit" class="cart__form__btn" value="Order">
+                            <br> <input type="text" name="txtDiaChi" class="cart__form__input-text" placeholder="Address">
+                            <br> <input type="submit" name="submit" class="cart__form__btn" value="Order Now">
                         </form>
                     </div>
 
