@@ -37,7 +37,7 @@
                 <div class="app__container">
                     <div class="grid wide">
                         <div class="row app__content">
-                            <div class="col l-9 product__info">
+                            <div class="product__info">
                                 <form action="./cart.php?action=add&ms=<?= $row['MSHH'] ?>" method="post" class="product__info-form">
 
                                     <img src="<?= $row['TenHinh'] ?>" alt="" class="product__info-img">
@@ -53,6 +53,16 @@
                                             <input class="product__quantity-input" type="text" name="quantity" value="1">
                                             <button class="product__quantity-btn">+</button>
                                         </div>
+                                        <div class="product__info-action">
+                                            <label for="size">Chọn size giày:</label>
+                                            <select name="size" id="size">
+                                                <option value="42">42</option>
+                                                <option value="41">41</option>
+                                                <option value="40">40</option>
+                                                <option value="39">39</option>
+                                                <option value="other">Khác</option>
+                                            </select>
+                                        </div>
                                         <div class="product__info-contact">
 
                                             <input class="product__info-btn add-cart" type="submit" value="Add Cart" name="addcart">
@@ -63,28 +73,46 @@
                                     </div>
                                 </form>
                             </div>
-                            <div class="col l-2-4 m-0 c-0 product__advertise">
-                                <div class="product__advertise-block">
-                                    <img src="./assets/image/fast_ship.png" alt="" class="product__advertise-img">
-                                    <div class="product__advertise-item">
-                                        <h4 class="product__advertise-heading">Fast Shipping</h4>
-                                        <p class="product__advertise-text">Only in 24h</p>
-                                    </div>
-                                </div>
-                                <div class="product__advertise-block">
-                                    <img src="./assets/image/protect.jpg" alt="" class="product__advertise-img">
-                                    <div class="product__advertise-item">
-                                        <h4 class="product__advertise-heading">Genuine Product</h4>
-                                        <p class="product__advertise-text">Import Product 100%</p>
-                                    </div>
-                                </div>
-                                <div class="product__advertise-block">
-                                    <img src="./assets/image/saving.png" alt="" class="product__advertise-img">
-                                    <div class="product__advertise-item">
-                                        <h4 class="product__advertise-heading">Thrift Purchase</h4>
-                                        <p class="product__advertise-text">Discount 10% - 30%</p>
-                                    </div>
-                                </div>
+                            <div class="product__advertise">
+                                <?php
+                                if (isset($_GET['MLH'])) {
+                                    $MLH = $_GET['MLH'];
+                                    //include './assets/php/connect_db.php';
+                                    $result = mysqli_query($con, "select * from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH LIMIT 8");
+                                    while ($row = mysqli_fetch_array($result)) { ?>
+                                        <div class="col l-6">
+                                            <a href="./product.php?MLH= <?= $row['MaLoaiHang'] ?>&id=<?= $row['TenHH'] ?>" class="home-product__link">
+                                                <div class="home-product-item">
+                                                    <div class="home-product-item__img" style="background-image: url(<?= $row['TenHinh'] ?>);">
+                                                    </div>
+                                                    <h4 class="home-product-item__name"><?= $row['TenHH'] ?></h4>
+                                                    <div class="home-product-item__price">
+                                                        <span class="home-product-item__price-old"><?= number_format($row['Gia_Cu'], 0, ',', '.') ?>đ</span>
+                                                        <span class="home-product-item__price-current"><?= number_format($row['Gia'], 0, ',', '.') ?>đ</span>
+                                                    </div>
+                                                    <div class="home-product-item__action">
+                                                        <span class="home-product-item__like--liked">
+                                                            <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                        </span>
+                                                        <div class="home-product-item__rating">
+                                                            <i class="home-product-item__rating-icon-star fas fa-star"></i>
+                                                            <i class="home-product-item__rating-icon-star fas fa-star"></i>
+                                                            <i class="home-product-item__rating-icon-star fas fa-star"></i>
+                                                            <i class="home-product-item__rating-icon-star fas fa-star"></i>
+                                                            <i class="home-product-item__rating-icon-star home-product-item__rating-icon-star-none fas fa-star"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="home-product-item__favorite">
+                                                        <i class="home-product-item__favorite-icon fas fa-check"></i> Like
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                <?php
+                                    }
+                                }
+                                ?>
                             </div>
                         </div>
                         <!-- Introduce Product -->
@@ -93,48 +121,6 @@
             }
         }
                 ?>
-
-                <div class="row">
-                    <div class="product__similar"><button class="product__similar-btn">Similar Product</button></div>
-                    <?php
-                    if (isset($_GET['MLH'])) {
-                        $MLH = $_GET['MLH'];
-                        //include './assets/php/connect_db.php';
-                        $result = mysqli_query($con, "select TenHH, TenHinh, Gia_Cu, Gia, MaLoaiHang from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH AND MaLoaiHang='$MLH'");
-                        while ($row = mysqli_fetch_array($result)) {
-                            echo '<div class="col l-2-4 m-4 c-6">';
-                            echo '<a href="./product.php?MLH=' . $row['MaLoaiHang'] . '&id=' . $row['TenHH'] . '" class="home-product__link">';
-                            echo '<div class="home-product-item">';
-                            echo '<div class="home-product-item__img" style="background-image: url(' . $row['TenHinh'] . ');">';
-                            echo '</div>';
-                            echo '<h4 class="home-product-item__name">' . $row['TenHH'] . '</h4>';
-                            echo '<div class="home-product-item__price">';
-                            echo '<span class="home-product-item__price-old">' . number_format($row['Gia_Cu'], 0, ',', '.') . 'đ</span>';
-                            echo '<span class="home-product-item__price-current">' . number_format($row['Gia'], 0, ',', '.') . 'đ</span>';
-                            echo '</div>';
-                            echo '<div class="home-product-item__action">';
-                            echo '<span class="home-product-item__like--liked">';
-                            echo '<i class="home-product-item__like-icon-empty far fa-heart"></i>';
-                            echo '<i class="home-product-item__like-icon-fill fas fa-heart"></i>';
-                            echo '</span>';
-                            echo '<div class="home-product-item__rating">';
-                            echo '<i class="home-product-item__rating-icon-star fas fa-star"></i>';
-                            echo '<i class="home-product-item__rating-icon-star fas fa-star"></i>';
-                            echo '<i class="home-product-item__rating-icon-star fas fa-star"></i>';
-                            echo '<i class="home-product-item__rating-icon-star fas fa-star"></i>';
-                            echo '<i class="home-product-item__rating-icon-star home-product-item__rating-icon-star-none fas fa-star"></i>';
-                            echo '</div>';
-                            echo '</div>';
-                            echo '<div class="home-product-item__favorite">';
-                            echo '<i class="home-product-item__favorite-icon fas fa-check"></i> Like';
-                            echo '</div>';
-                            echo '</div>';
-                            echo '</a>';
-                            echo '</div>';
-                        }
-                    }
-                    ?>
-                </div>
                     </div>
                 </div>
 
@@ -142,17 +128,6 @@
                 <?php require './assets/sidebar/footer.php'; ?>
 
     </div>
-    <script>
-        var coll = document.querySelector(".collapsible");
-        coll.addEventListener("click", function() {
-            var content = this.nextElementSibling;
-            if (content.style.display === "block") {
-                content.style.display = "none";
-            } else {
-                content.style.display = "block";
-            }
-        });
-    </script>
 </body>
 
 </html>

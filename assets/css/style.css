@@ -1463,7 +1463,8 @@ i.home-product-item__like-icon-fill {
 }
 
 .product__info {
-  /* width: 79%; */
+  width: 68%;
+  height: 350px;
   background-color: var(--white-color);
   display: flex;
   padding: 5px;
@@ -1472,8 +1473,9 @@ i.home-product-item__like-icon-fill {
 }
 
 .product__advertise {
-  /* width: 20%; */
-  /* height: 1000px; */
+  width: 30%;
+  display: flex;
+  flex-wrap: wrap;
   background-color: white;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
@@ -1486,6 +1488,7 @@ i.home-product-item__like-icon-fill {
 
 .product__info-action {
   display: flex;
+  margin: 10px 0;
 }
 
 .product__info-location {
