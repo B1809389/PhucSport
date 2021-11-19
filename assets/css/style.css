@@ -872,6 +872,11 @@ body {
   border-radius: 3px;
 }
 
+.home-filter__btn--active {
+  background-color:#edd65d;
+}
+
+
 .btn--normal {
   margin-left: 10px;
 }

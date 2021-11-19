@@ -1,6 +1,6 @@
 <div class="home-filter hide-on-mobile-tablet">
     <!-- <span class="home-filter__label">Sort</span> -->
-    <button class="home-filter__btn btn btn--primary">Tất cả sản phẩm</button>
+    <button onclick="test();" class="home-filter__btn btn home-filter__btn--active"><a href="./index.php" class="select-input__link">Tất cả sản phẩm</a></button>
     <button class="home-filter__btn btn"><a href="./index.php?action=best" class="select-input__link">Bán chạy nhất</a></button>
 
     <div class="select-input">

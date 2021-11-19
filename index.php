@@ -7,10 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PhucSports</title>
-    <!-- <link rel="stylesheet" href="./assets/css/main.css">
-    <link rel="stylesheet" href="./assets/css/base.css">
-    <link rel="stylesheet" href="./assets/css/header2.css"> -->
-
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
@@ -43,15 +39,6 @@
                     <div class="col l-12 m-12 c-12">
                         <!-- Home Filter -->
                         <?php require './assets/sidebar/home_filter.php'; ?>
-                        <div class="responsive__home-filter">
-                            <ul class="responsive__home-filter-list">
-                                <!-- <li class="responsive__home-filter-item"><i class="fas fa-list"></i></li> -->
-                                <li class="responsive__home-filter-item">Popular</li>
-                                <li class="responsive__home-filter-item">New</li>
-                                <li class="responsive__home-filter-item">Best Sale</li>
-                                <li class="responsive__home-filter-item">Price</li>
-                            </ul>
-                        </div>
                         <!-- Product -->
                         <div class="home-product">
                             <div class="row">
@@ -85,7 +72,7 @@
                                     //$sql = "select * from hanghoa";
                                     $result = mysqli_query($con, $sql);
                                     $check = mysqli_fetch_array($result);
-                                    if($check == 0){
+                                    if ($check == 0) {
                                         echo '<h3 class="alert__none-product">Không có sản phẩm nào</h3>';
                                     }
                                     while ($row = mysqli_fetch_array($result)) { ?>
@@ -174,7 +161,11 @@
 
     </div>
 
-    <!-- Sau div toan trang la Modal -->
+    <script>
+        document.getElementsByClassName("home__filter-btn").addEventListener("click", function() {
+            console.log(1)
+        });
+    </script>
 </body>
 
 </html>
