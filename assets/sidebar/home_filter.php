@@ -1,7 +1,7 @@
 <div class="home-filter hide-on-mobile-tablet">
     <!-- <span class="home-filter__label">Sort</span> -->
     <button class="home-filter__btn btn btn--primary">Tất cả sản phẩm</button>
-    <button class="home-filter__btn btn">Bán chạy nhất</button>
+    <button class="home-filter__btn btn"><a href="./index.php?action=best" class="select-input__link">Bán chạy nhất</a></button>
 
     <div class="select-input">
         <span class="select-input__label">Lọc sản phẩm </span> &nbsp;
@@ -15,13 +15,16 @@
                 <a href="./index.php?action=high" class="select-input__link">Giá từ cao đến thấp</a>
             </li>
             <li class="select-input__item">
-                <a href="./index.php?action=tunhien" class="select-input__link">Giày cỏ tự nhiên</a>
+                <a href="./index.php?action=NK" class="select-input__link">Giày Nike</a>
             </li>
             <li class="select-input__item">
-                <a href="./index.php?action=nhantao" class="select-input__link">Giày cỏ nhân tạo</a>
+                <a href="./index.php?action=AD" class="select-input__link">Giày Adidas</a>
             </li>
             <li class="select-input__item">
-                <a href="./index.php?action=futsal" class="select-input__link">Giày futsal</a>
+                <a href="./index.php?action=PM" class="select-input__link">Giày Puma</a>
+            </li>
+            <li class="select-input__item">
+                <a href="./index.php?action=MZ" class="select-input__link">Giày Mizuno</a>
             </li>
         </ul>
     </div>

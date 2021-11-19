@@ -118,23 +118,18 @@ session_start();
                         <div class="header__bottom-navbar-menu-none">
                             <ul class="header__bottom-navbar-menu-none-list">
                                 <li class="header__bottom-navbar-menu-none-item">
-                                    <h4 class="header__bottom-navbar-menu-none-item--brand">NIKE</h4>
-                                    <h4><i class="list__list-icon fas fa-chevron-circle-right"></i> GIÀY CỎ TỰ NHIÊN</h4>
+                                    <h4 class="header__bottom-navbar-menu-none-item--brand"><i class="list__list-icon fas fa-chevron-circle-right">&nbsp;</i>NIKE</h4>
+                                    
 
                                     <ul class="list__list">
-                                    <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item--link">NIKE MERCURIAL</a></li>
+                                        <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item--link">NIKE MERCURIAL</a></li>
                                         <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item--link">NIKE PHANTOM</a></li>
                                         <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item--link">NIKE TIEMPO</a></li>
                                     </ul>
-                                    <h4><i class="list__list-icon fas fa-chevron-circle-right"></i> GIÀY CỎ NHÂN TẠO & FUTSAL</h4>
-                                    <ul class="list__list">
-                                        <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item--link">NIKE MERCURIAL</a></li>
-                                        <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item--link">NIKE TIEMPO</a></li>
-                                    </ul>
+                                    
                                 </li>
                                 <li class="header__bottom-navbar-menu-none-item">
-                                    <h4 class="header__bottom-navbar-menu-none-item--brand">ADIDAS</h4>
-                                    <h4><i class="list__list-icon fas fa-chevron-circle-right"></i>GIÀY CỎ NHÂN TẠO & FUTSAL</h4>
+                                    <h4 class="header__bottom-navbar-menu-none-item--brand"><i class="list__list-icon fas fa-chevron-circle-right"></i>&nbsp;ADIDAS</h4>
 
                                     <ul class="list__list">
                                         <li class="list__list-item">
@@ -153,7 +148,7 @@ session_start();
 
                                 </li>
                                 <li class="header__bottom-navbar-menu-none-item">
-                                    <h4 class="header__bottom-navbar-menu-none-item--brand">PUMA</h4>
+                                    <h4 class="header__bottom-navbar-menu-none-item--brand"><i class="list__list-icon fas fa-chevron-circle-right"></i>&nbsp;PUMA</h4>
                                     <ul class="list__list">
                                         <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item"></a>
                                             <a href="./index.php?action=PM" class="list__list-item--link">PUMA ULTRA</a>
@@ -167,7 +162,7 @@ session_start();
                                     </ul>
                                 </li>
                                 <li class="header__bottom-navbar-menu-none-item">
-                                    <h4 class="header__bottom-navbar-menu-none-item--brand">MIZUNO</h4>
+                                    <h4 class="header__bottom-navbar-menu-none-item--brand"><i class="list__list-icon fas fa-chevron-circle-right"></i>&nbsp;MIZUNO</h4>
                                     <ul class="list__list">
                                         <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item"></a>
                                             <a href="./index.php?action=MZ" class="list__list-item--link">MIZUNO MORELIA</a>

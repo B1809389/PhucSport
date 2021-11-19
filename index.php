@@ -61,31 +61,25 @@
                                     $action = $_GET['action'];
 
                                     if ($action == 'NK') {
-                                        $sql = "select TenHH, TenHinh, Gia_Cu, Gia, MaLoaiHang from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH AND MaLoaiHang='$action'";
+                                        $sql = "select * from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH AND MaLoaiHang='$action'";
                                     }
                                     if ($action == 'AD') {
-                                        $sql = "select TenHH, TenHinh, Gia_Cu, Gia, MaLoaiHang from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH AND MaLoaiHang='$action'";
+                                        $sql = "select * from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH AND MaLoaiHang='$action'";
                                     }
                                     if ($action == 'PM') {
-                                        $sql = "select TenHH, TenHinh, Gia_Cu, Gia, MaLoaiHang from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH AND MaLoaiHang='$action'";
+                                        $sql = "select * from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH AND MaLoaiHang='$action'";
                                     }
                                     if ($action == 'MZ') {
-                                        $sql = "select TenHH, TenHinh, Gia_Cu, Gia, MaLoaiHang from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH AND MaLoaiHang='$action'";
+                                        $sql = "select * from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH AND MaLoaiHang='$action'";
                                     }
                                     if ($action == 'low') {
-                                        $sql = "select TenHH, TenHinh, Gia_Cu, Gia, MaLoaiHang from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH order by Gia asc";
+                                        $sql = "select * from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH order by Gia asc";
                                     }
                                     if ($action == 'high') {
-                                        $sql = "select TenHH, TenHinh, Gia_Cu, Gia, MaLoaiHang from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH order by Gia desc";
+                                        $sql = "select * from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH order by Gia desc";
                                     }
-                                    if ($action == 'tunhien') {
-                                        $sql = "select TenHH, TenHinh, Gia_Cu, Gia, MaLoaiHang from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH AND Gia >= 3000000";
-                                    }
-                                    if ($action == 'nhantao') {
-                                        $sql = "select TenHH, TenHinh, Gia_Cu, Gia, MaLoaiHang from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH AND Gia <= 2000000";
-                                    }
-                                    if ($action == 'futsal') {
-                                        $sql = "select TenHH, TenHinh, Gia_Cu, Gia, MaLoaiHang from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH AND Gia BETWEEN 0 AND 2000000";
+                                    if ($action == 'best') {
+                                        $sql = "select * from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH AND a.SoLuongHang <= 10";
                                     }
 
                                     //$sql = "select * from hanghoa";
@@ -128,7 +122,7 @@
                                     }
                                 } else {
                                     // $sql = "select * from hanghoa order by Gia desc";
-                                    $sql = "select TenHH, TenHinh, Gia_Cu, Gia, MaLoaiHang from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH";
+                                    $sql = "select * from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH";
                                     $result = mysqli_query($con, $sql);
                                     while ($row = mysqli_fetch_array($result)) { ?>
                                         <div class="col l-2-4 m-4 c-6">
