@@ -72,6 +72,9 @@
     padding: 0 8px;
     margin: 5px 0;
     height: 45px;
+    border-right: none;
+    border-left: none;
+    border-top: none;
 }
 
 .auth-form__input-login {
@@ -79,6 +82,10 @@
     height: 45px;
     margin: 5px 0;
     padding: 0;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    outline: none;
 }
 
 .auth-form__aside {

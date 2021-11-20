@@ -1,4 +1,4 @@
-<?php ob_start();?>
+<?php ob_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,10 +6,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register-Login</title>
-    <link  rel="stylesheet" href="http://localhost/PhucSport/assets/css/style.css">
-    <link  rel="stylesheet" href="http://localhost/PhucSport/assets/css/grid.css">
-    <link  rel="stylesheet" href="http://localhost/PhucSport/assets/css/responsive.css">
+    <title><?php
+        if (isset($_GET['action'])) {
+            $action = $_GET['action'];
+            if ($action == 'register') {
+                echo 'Đăng ký';
+            } else if ($action == 'login') {
+                echo 'Đăng nhập';
+            }
+        }
+        ?></title>
+    <link rel="stylesheet" href="http://localhost/PhucSport/assets/css/style.css">
+    <link rel="stylesheet" href="http://localhost/PhucSport/assets/css/grid.css">
+    <link rel="stylesheet" href="http://localhost/PhucSport/assets/css/responsive.css">
     <link rel="stylesheet" href="http://localhost/PhucSport/assets/css/register_login.css">
     <!-- them dong ke tiep se lay duoc toan trang ko margin -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -28,7 +37,7 @@
         require_once '../assets/php/connect_db.php';
         if (isset($_POST['submit'])) {
             $cong = mysqli_query($con, "select * from khachhang");
-            $mskh = 'KH' .rand();
+            $mskh = 'KH' . rand();
             $hoten = $_POST['txtHoTenKH'];
             $tencongty = $_POST['txtTenCongTy'];
             $sodienthoai = $_POST['txtSoDienThoai'];
@@ -99,18 +108,8 @@
                                 <!-- Button -->
                                 <input class="btn btn--primary" type="submit" name="submit" value="ĐĂNG KÝ">
                             </form>
-                            <!-- Services -->
-                            <!-- Social -->
-                            <!-- <div class="auth-form__social">
-                                <a href="" class=" auth-form__social--link btn btn--with-icon btn--facebook">
-                                    <i class="fab fa-facebook-square"></i> Connect with Facebook
-                                </a>
-                                <a href="" class="auth-form__social--link btn btn--with-icon btn--google">
-                                    <i class="fab fa-google-plus-g"></i> Connect with Google
-                                </a>
-                            </div> -->
+
                         </div>
-                        <!-- <div class="col l-2 m-0 c-0"></div> -->
                     </div>
 
                     <?php
@@ -162,10 +161,8 @@
                             </div>
                             <!-- Content -->
                             <form class="auth-form__form" method="POST">
-                                <h4 class="text"><b>Tên tài khoản:</b></h4>
-                                <br> <input type="text" name="user" class="auth-form__input-login">
-                                <h4 class="text"><b>Mật khẩu:</b></h4>
-                                <br> <input type="password" name="password" class="auth-form__input-login">
+                                <br> <input type="text" name="user" placeholder="Tên tài khoản" class="auth-form__input-login">
+                                <br> <input type="password" name="password" placeholder="Mật khẩu" class="auth-form__input-login">
                                 <!-- Services -->
                                 <div class="auth-form__aside">
                                     <p class="auth-form__policy-text">
@@ -178,15 +175,6 @@
                                 <input class="btn-login" type="submit" name="login" value="ĐĂNG NHẬP">
                                 <!-- </div> -->
                             </form>
-                            <!-- Social -->
-                            <!-- <div class="auth-form__social">
-                                <a href="" class=" auth-form__social--link btn btn--with-icon btn--facebook">
-                                    <i class="fab fa-facebook-square"></i> Connect with Facebook
-                                </a>
-                                <a href="" class="auth-form__social--link btn btn--with-icon btn--google">
-                                    <i class="fab fa-google-plus-g"></i> Connect with Google
-                                </a>
-                            </div> -->
                         </div>
                         <!-- <div class="col l-2 m-0 c-0"></div> -->
                     </div>
@@ -194,7 +182,8 @@
             </div>
         </div>
 
-        <?php //require 'http://localhost/PhucSport/assets/sidebar/footer.php'; ?>
+        <?php //require 'http://localhost/PhucSport/assets/sidebar/footer.php'; 
+        ?>
     </div>
 
     <!-- Sau div toan trang la Modal -->

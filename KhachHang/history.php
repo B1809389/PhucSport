@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account</title>
+    <title>Lịch sử mua hàng</title>
     <link rel="stylesheet" href="http://localhost/PhucSport/assets/css/style.css">
     <link rel="stylesheet" href="http://localhost/PhucSport/assets/css/grid.css">
     <link rel="stylesheet" href="http://localhost/PhucSport/assets/css/responsive.css">
@@ -31,14 +31,14 @@
                         <!-- Category -->
                         <nav class="category">
                             <h3 class="category__heading">
-                                <i class="category__heading-icon fas fa-tasks"></i> Manage List
+                                <i class="category__heading-icon fas fa-tasks"></i> Danh mục
                             </h3>
                             <ul class="category-list">
                                 <!-- <li class="category-item">
                                     <a href="http://localhost/PhucSport/user.php?action=info" class="category-item-link">User Information</a>
                                 </li> -->
                                 <li class="category-item">
-                                    <a href="http://localhost/PhucSport/KhachHang/history.php" class="category-item-active category-item-link">Order Manage</a>
+                                    <a href="http://localhost/PhucSport/KhachHang/history.php" class="category-item-active category-item-link">Lịch sử mua hàng</a>
                                 </li>
                                 <!-- <li class="category-item">
                                     <a href="http://localhost/PhucSport/user.php?action=edit" class="category-item-link">Edit Infomation</a>

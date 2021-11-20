@@ -6,7 +6,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product</title>
+    <title>Sản phẩm <?php
+                    include '../assets/php/connect_db.php';
+                    if (isset($_GET['id'])) {
+                        $id = $_GET['id'];
+                        $result = mysqli_query($con, "select * from hanghoa where TenHH='$id'");
+                        $row = mysqli_fetch_array($result);
+                        echo $row['TenHH'];
+                    }
+                    ?></title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/grid.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">

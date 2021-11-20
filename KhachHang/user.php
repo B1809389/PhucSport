@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account</title>
+    <title>Thông tin tài khoản</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/grid.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
@@ -31,18 +31,18 @@
                         <!-- Category -->
                         <nav class="category">
                             <h3 class="category__heading">
-                                <i class="category__heading-icon fas fa-tasks"></i> Manage List
+                                <i class="category__heading-icon fas fa-tasks"></i> Danh mục
                             </h3>
                             <ul class="category-list">
                                 <li class="category-item">
-                                    <a id="demo" href="./user.php?action=info" class="category-item-link">User Information</a>
+                                    <a id="demo" href="./user.php?action=info" class="category-item-link">Thông tin tài khoản</a>
                                 </li>
                                 
                                 <li class="category-item">
-                                    <a href="./user.php?action=edit" class="category-item-link">Edit Infomation</a>
+                                    <a href="./user.php?action=edit" class="category-item-link">Cập nhật thông tin</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="./user.php?action=change" class="category-item-link">Change Password</a>
+                                    <a href="./user.php?action=change" class="category-item-link">Đổi mật khẩu</a>
                                 </li>
                             </ul>
                         </nav>
@@ -76,7 +76,7 @@
                         <!-- User Info -->
                         <div class="user-infomation">
                             <div class="product__manage-block-heading">
-                                <h4 class="product__heading">User Infomation</h4>
+                                <h4 class="product__heading">Thông tin tài khoản</h4>
                                 <!-- <button class="product__heading-btn"><a href="../directional.php?action=edit_user" class="action__link">+ Add User</a></button> -->
                             </div>
 
@@ -182,7 +182,7 @@
                             }
                             ?>
                             <div class="product__manage-block-heading">
-                                <h4 class="product__heading">Change Password</h4>
+                                <h4 class="product__heading">Đổi mật khẩu</h4>
                                 <!-- <button class="product__heading-btn"><a href="../directional.php?action=edit_user" class="action__link">+ Add User</a></button> -->
                             </div>
                             <form action="" method="post" class="user-change__password-form">
@@ -213,7 +213,7 @@
                             }
                             ?>
                             <div class="product__manage-block-heading">
-                                <h4 class="product__heading">Update Infomation</h4>
+                                <h4 class="product__heading">Cập nhật thông tin</h4>
                                 <!-- <button class="product__heading-btn"><a href="../directional.php?action=edit_user" class="action__link">+ Add User</a></button> -->
                             </div>
                             <form action="" method="post" class="user-change__password-form">

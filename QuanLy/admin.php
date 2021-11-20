@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>Quản lý bán hàng</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/grid.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
@@ -46,16 +46,16 @@
                                     <a onclick="ok()" href="http://localhost/PhucSport/QuanLy/admin.php" class="category-item-active category-item-link">Dashboard</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="http://localhost/PhucSport/QuanLy/product_manage.php" class="category-item-link">Product Manage</a>
+                                    <a href="http://localhost/PhucSport/QuanLy/product_manage.php" class="category-item-link">Quản lý sản phẩm</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="http://localhost/PhucSport/QuanLy/user_manage.php" class="category-item-link">Account Manage</a>
+                                    <a href="http://localhost/PhucSport/QuanLy/user_manage.php" class="category-item-link">Quản lý người dùng</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="http://localhost/PhucSport/QuanLy/order_manage.php" class="category-item-link">Order Manage</a>
+                                    <a href="http://localhost/PhucSport/QuanLy/order_manage.php" class="category-item-link">Quản lý đơn hàng</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="" class="category-item-link">Configuration</a>
+                                    <a href="" class="category-item-link">Cấu hình chức năng</a>
                                 </li>
                             </ul>
                         </nav>
@@ -77,7 +77,7 @@
                                                                             }
                                                                             echo $i; ?>
                                         </h2>
-                                        <h4 class="admin__page-item-text">Order</h4>
+                                        <h4 class="admin__page-item-text">Đặt hàng</h4>
                                     </div>
                                 </div>
                             </div>
@@ -95,7 +95,7 @@
                                                                                 $i++;
                                                                             }
                                                                             echo $i; ?></h2>
-                                        <h4 class="admin__page-item-text">Product</h4>
+                                        <h4 class="admin__page-item-text">Sản phẩm</h4>
                                     </div>
                                 </div>
                             </div>
@@ -113,7 +113,7 @@
                                                                                 $i++;
                                                                             }
                                                                             echo $i; ?></h2>
-                                        <h4 class="admin__page-item-text">User</h4>
+                                        <h4 class="admin__page-item-text">Tài khoản</h4>
                                     </div>
                                 </div>
                             </div>
@@ -125,7 +125,7 @@
                                     </div>
                                     <div class="admin__page-item-info">
                                         <h2 class="admin__page-item-number">155</h2>
-                                        <h4 class="admin__page-item-text">Post</h4>
+                                        <h4 class="admin__page-item-text">Bài đăng</h4>
                                     </div>
                                 </div>
                             </div>
@@ -136,8 +136,8 @@
                                         <i class="admin__page-item-icon-css fas fa-eye"></i>
                                     </div>
                                     <div class="admin__page-item-info">
-                                        <h2 class="admin__page-item-number">12.5K</h2>
-                                        <h4 class="admin__page-item-text">View</h4>
+                                        <h2 class="admin__page-item-number">12.5k</h2>
+                                        <h4 class="admin__page-item-text">Lượt xem</h4>
                                     </div>
                                 </div>
                             </div>
