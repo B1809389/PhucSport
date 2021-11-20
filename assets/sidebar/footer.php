@@ -2,35 +2,35 @@
     <div class="grid wide">
         <div class="row">
             <div class="col l-2-4">
-                <h3 class="footer__heading">Customer Care</h3>
+                <h3 class="footer__heading">Chăm sóc khách hàng</h3>
                 <ul class="footer__list">
                     <li class="footer__list-item">
-                        <a href="" class="footer__list-item-link">Help Center</a>
+                        <a href="" class="footer__list-item-link">Trung tâm trợ giúp</a>
                     </li>
                     <li class="footer__list-item">
                         <a href="" class="footer__list-item-link">PhucSports Store</a>
                     </li>
                     <li class="footer__list-item">
-                        <a href="" class="footer__list-item-link">Customer Care</a>
+                        <a href="" class="footer__list-item-link">Chăm sóc khách hàng</a>
                     </li>
                 </ul>
             </div>
             <div class="col l-2-4">
-                <h3 class="footer__heading">Introduce</h3>
+                <h3 class="footer__heading">Giới thiệu</h3>
                 <ul class="footer__list">
                     <li class="footer__list-item">
-                        <a href="" class="footer__list-item-link">Introduce PhucSports</a>
+                        <a href="" class="footer__list-item-link">Giới thiệu PhucSports</a>
                     </li>
                     <li class="footer__list-item">
-                        <a href="" class="footer__list-item-link">Recruitment</a>
+                        <a href="" class="footer__list-item-link">Thông tin tuyển dụng</a>
                     </li>
                     <li class="footer__list-item">
-                        <a href="" class="footer__list-item-link">Rules and Security</a>
+                        <a href="" class="footer__list-item-link">Chính sách bảo mật</a>
                     </li>
                 </ul>
             </div>
             <div class="col l-2-4">
-                <h3 class="footer__heading">Product List</h3>
+                <h3 class="footer__heading">Thương hiệu sản phẩm</h3>
                 <ul class="footer__list">
                     <li class="footer__list-item">
                         <a href="" class="footer__list-item-link">Nike</a>
