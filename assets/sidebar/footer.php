@@ -66,10 +66,10 @@
             <div class="col l-2-4">
                 <h3 class="footer__heading">Go to Shop Application</h3>
                 <div class="footer__download">
-                    <img src="./assets/image/qr.png" alt="" class="footer__download-qr">
+                    <img src="http://localhost/PhucSport/assets/image/qr.png" alt="" class="footer__download-qr">
                     <div class="footer__download-apps">
-                        <img src="./assets/image/QR_Appstore.png" alt="" class="footer__download-apps-img">
-                        <img src="./assets/image/QR_GooglePlay.png" alt="" class="footer__download-apps-img">
+                        <img src="http://localhost/PhucSport/assets/image/QR_Appstore.png" alt="" class="footer__download-apps-img">
+                        <img src="http://localhost/PhucSport/assets/image/QR_GooglePlay.png" alt="" class="footer__download-apps-img">
                     </div>
                 </div>
             </div>

@@ -7,15 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PhucSports</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/grid.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
-    <link rel="stylesheet" href="./assets/css/slideshow.css">
+    <link rel="stylesheet" href="http://localhost/PhucSport/assets/css/style.css">
+    <link rel="stylesheet" href="http://localhost/PhucSport/assets/css/grid.css">
+    <link rel="stylesheet" href="http://localhost/PhucSport/assets/css/responsive.css">
+    <link rel="stylesheet" href="http://localhost/PhucSport/assets/css/slideshow.css">
 
     <!-- them dong ke tiep se lay duoc toan trang ko margin -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=vietnamese">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="http://localhost/PhucSport/assets/fonts/fontawesome-free-5.15.3-web/css/all.css">
 </head>
 
 <body>
@@ -73,7 +73,7 @@
                                     $result = mysqli_query($con, $sql);
                                     while ($row = mysqli_fetch_array($result)) { ?>
                                         <div class="col l-2-4 m-4 c-6">
-                                            <a href="./product.php?MLH= <?= $row['MaLoaiHang'] ?>&id=<?= $row['TenHH'] ?>" class="home-product__link">
+                                            <a href="http://localhost/PhucSport/KhachHang/product.php?MLH= <?= $row['MaLoaiHang'] ?>&id=<?= $row['TenHH'] ?>" class="home-product__link">
                                                 <div class="home-product-item">
                                                     <div class="home-product-item__img" style="background-image: url(<?= $row['TenHinh'] ?>);">
                                                     </div>
@@ -108,7 +108,7 @@
                                     $result = mysqli_query($con, $sql);
                                     while ($row = mysqli_fetch_array($result)) { ?>
                                         <div class="col l-2-4 m-4 c-6">
-                                            <a href="./product.php?MLH= <?= $row['MaLoaiHang'] ?>&id=<?= $row['TenHH'] ?>" class="home-product__link">
+                                            <a href="http://localhost/PhucSport/KhachHang/product.php?MLH= <?= $row['MaLoaiHang'] ?>&id=<?= $row['TenHH'] ?>" class="home-product__link">
                                                 <div class="home-product-item">
                                                     <div class="home-product-item__img" style="background-image: url(<?= $row['TenHinh'] ?>);">
                                                     </div>

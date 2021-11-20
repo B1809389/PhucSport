@@ -7,21 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/grid.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
-    <link rel="stylesheet" href="./assets/css/user_manage.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/grid.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/user_manage.css">
 
     <!-- them dong ke tiep se lay duoc toan trang ko margin -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=vietnamese">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-free-5.15.3-web/css/all.css">
 </head>
 
 <body>
     <div class="app">
         <?php
-        require './assets/sidebar/header.php';
+        require '../assets/sidebar/header.php';
         ?>
 
         <div class="app__container">
@@ -37,9 +37,7 @@
                                 <li class="category-item">
                                     <a id="demo" href="./user.php?action=info" class="category-item-link">User Information</a>
                                 </li>
-                                <!-- <li class="category-item">
-                                    <a href="./history.php" class="category-item-link">Order Manage</a>
-                                </li> -->
+                                
                                 <li class="category-item">
                                     <a href="./user.php?action=edit" class="category-item-link">Edit Infomation</a>
                                 </li>
@@ -79,7 +77,7 @@
                         <div class="user-infomation">
                             <div class="product__manage-block-heading">
                                 <h4 class="product__heading">User Infomation</h4>
-                                <!-- <button class="product__heading-btn"><a href="./directional.php?action=edit_user" class="action__link">+ Add User</a></button> -->
+                                <!-- <button class="product__heading-btn"><a href="../directional.php?action=edit_user" class="action__link">+ Add User</a></button> -->
                             </div>
 
                             <table class="table">
@@ -95,7 +93,7 @@
                                     <th class="table__th-action">ACTION</th>
                                 </tr>
                                 <?php
-                                include './assets/php/connect_db.php';
+                                include '../assets/php/connect_db.php';
                                 if (isset($_SESSION['user'])) {
                                     $a = $_SESSION['user'];
                                     $i = 1;
@@ -113,8 +111,8 @@
                                                 <td class="table__td-user"><?= $row['User'] ?></td>
                                                 <td class="table__td-password"><?= $row['Password'] ?></td>
                                                 <td class="table__td-action">
-                                                    <button class="action__btn-edit"><a href="./user.php?action=edit" class="action__link">Edit</a></button>
-                                                    <!-- <button class="action__btn del"><a href="./user_manage.php?id=" class="action__link">Delete</a></button> -->
+                                                    <button class="action__btn-edit"><a href="../user.php?action=edit" class="action__link">Edit</a></button>
+                                                    <!-- <button class="action__btn del"><a href="../user_manage.php?id=" class="action__link">Delete</a></button> -->
                                                 </td>
                                             </tr>
                                         <?php }
@@ -134,15 +132,15 @@
                                                 <td class="table__td-user"><?= $row['User'] ?></td>
                                                 <td class="table__td-password"><?= $row['Password'] ?></td>
                                                 <td class="table__td-action">
-                                                    <button class="action__btn-edit"><a href="./user.php?action=edit" class="action__link">Edit</a></button>
-                                                    <!-- <button class="action__btn del"><a href="./user_manage.php?id=" class="action__link">Delete</a></button> -->
+                                                    <button class="action__btn-edit"><a href="../user.php?action=edit" class="action__link">Edit</a></button>
+                                                    <!-- <button class="action__btn del"><a href="../user_manage.php?id=" class="action__link">Delete</a></button> -->
                                                 </td>
                                             </tr>
                                 <?php }
                                     }
                                 } else {
                                     echo "<script> confirm('You are not logged in');</script>";
-                                    header('location: ./register_login.php?action=login');
+                                    header('location: ../register_login.php?action=login');
                                 } ?>
                             </table>
 
@@ -150,7 +148,7 @@
                             if (isset($_GET['id'])) {
                                 // $action=$_GET['action'];
                                 $id = $_GET['id'];
-                                include './assets/php/connect_db.php';
+                                include '../assets/php/connect_db.php';
                                 $sql = "delete from khachhang where MSKH = '$id'";
 
                                 if (mysqli_query($con, $sql)) {
@@ -172,12 +170,12 @@
                                 $username = $_POST['username'];
                                 $oldpass = $_POST['old_password'];
                                 $newpass = $_POST['new_password'];
-                                include './assets/php/connect_db.php';
+                                include '../assets/php/connect_db.php';
 
                                 $query = "UPDATE khachhang set Password='$newpass' where User='$username'";
                                 if (mysqli_query($con, $query)) {
                                     echo "<script>alert('Password was changed success!')</script>";
-                                    header('Location: ./logout.php');
+                                    header('Location: ../logout.php');
                                 } else {
                                     echo '<script>alert("Fail !")</script>';
                                 }
@@ -185,7 +183,7 @@
                             ?>
                             <div class="product__manage-block-heading">
                                 <h4 class="product__heading">Change Password</h4>
-                                <!-- <button class="product__heading-btn"><a href="./directional.php?action=edit_user" class="action__link">+ Add User</a></button> -->
+                                <!-- <button class="product__heading-btn"><a href="../directional.php?action=edit_user" class="action__link">+ Add User</a></button> -->
                             </div>
                             <form action="" method="post" class="user-change__password-form">
                                 <br> <input type="text" name="username" class="user-change__password-input" placeholder="User">
@@ -203,12 +201,12 @@
                                 $phone = $_POST['txtPhone'];
                                 $cty = $_POST['txtCompany'];
                                 $email = $_POST['txtEmail'];
-                                include './assets/php/connect_db.php';
+                                include '../assets/php/connect_db.php';
 
                                 $query = "UPDATE khachhang set HoTenKH='$name', TenCongTy='$cty', SoDienThoai='$phone',Email='$email' where MSKH='$id'";
                                 if (mysqli_query($con, $query)) {
                                     echo "<script>alert('Update success!')</script>";
-                                    header('Location: ./user.php?action=info');
+                                    header('Location: ../user.php?action=info');
                                 } else {
                                     echo '<script>alert("Fail !")</script>';
                                 }
@@ -216,7 +214,7 @@
                             ?>
                             <div class="product__manage-block-heading">
                                 <h4 class="product__heading">Update Infomation</h4>
-                                <!-- <button class="product__heading-btn"><a href="./directional.php?action=edit_user" class="action__link">+ Add User</a></button> -->
+                                <!-- <button class="product__heading-btn"><a href="../directional.php?action=edit_user" class="action__link">+ Add User</a></button> -->
                             </div>
                             <form action="" method="post" class="user-change__password-form">
                                 <br> <input type="text" name="txtID" class="user-change__info-input" placeholder="Enter your ID">
@@ -235,7 +233,7 @@
     </div>
 
     <?php
-    require './assets/sidebar/footer.php';
+    require '../assets/sidebar/footer.php';
     ?>
     </div>
 

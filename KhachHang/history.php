@@ -7,21 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/grid.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
-    <link rel="stylesheet" href="./assets/css/user_manage.css">
+    <link rel="stylesheet" href="http://localhost/PhucSport/assets/css/style.css">
+    <link rel="stylesheet" href="http://localhost/PhucSport/assets/css/grid.css">
+    <link rel="stylesheet" href="http://localhost/PhucSport/assets/css/responsive.css">
+    <link rel="stylesheet" href="http://localhost/PhucSport/assets/css/user_manage.css">
 
     <!-- them dong ke tiep se lay duoc toan trang ko margin -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=vietnamese">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="http://localhost/PhucSport/assets/fonts/fontawesome-free-5.15.3-web/css/all.css">
 </head>
 
 <body>
     <div class="app">
         <?php
-        require './assets/sidebar/header.php';
+        require '../assets/sidebar/header.php';
         ?>
 
         <div class="app__container">
@@ -35,16 +35,16 @@
                             </h3>
                             <ul class="category-list">
                                 <!-- <li class="category-item">
-                                    <a href="./user.php?action=info" class="category-item-link">User Information</a>
+                                    <a href="http://localhost/PhucSport/user.php?action=info" class="category-item-link">User Information</a>
                                 </li> -->
                                 <li class="category-item">
-                                    <a href="./history.php" class="category-item-active category-item-link">Order Manage</a>
+                                    <a href="http://localhost/PhucSport/KhachHang/history.php" class="category-item-active category-item-link">Order Manage</a>
                                 </li>
                                 <!-- <li class="category-item">
-                                    <a href="./user.php?action=edit" class="category-item-link">Edit Infomation</a>
+                                    <a href="http://localhost/PhucSport/user.php?action=edit" class="category-item-link">Edit Infomation</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="./user.php?action=change" class="category-item-link">Change Password</a>
+                                    <a href="http://localhost/PhucSport/user.php?action=change" class="category-item-link">Change Password</a>
                                 </li> -->
                             </ul>
                         </nav>
@@ -61,7 +61,7 @@
                                 <th class="table__th-action-order"></th>
                             </tr>
                             <?php
-                            include './assets/php/connect_db.php';
+                            include '../assets/php/connect_db.php';
                             if (isset($_SESSION['user'])) {
                                 $user = $_SESSION['user'];
                             }
@@ -81,8 +81,8 @@
                                     <td class="table__td-date-transport"><?= $row['NgayGH'] ?></td>
 
                                     <td class="table__td-action-order">
-                                        <button class="action__btn edit"><a href="./history.php?action=show&id=<?= $row['SoDonDH'] ?>&ms=<?= $row['MSKH'] ?>" class="action__link">Show</a></button>
-                                        <button class="action__btn del"><a href="./history.php?action=delete&id=<?= $row['SoDonDH'] ?>" class="action__link">Delete</a></button>
+                                        <button class="action__btn edit"><a href="http://localhost/PhucSport/Khachhang/history.php?action=show&id=<?= $row['SoDonDH'] ?>&ms=<?= $row['MSKH'] ?>" class="action__link">Show</a></button>
+                                        <button class="action__btn del"><a href="http://localhost/PhucSport/KhachHang/history.php?action=delete&id=<?= $row['SoDonDH'] ?>" class="action__link">Delete</a></button>
                                     </td>
                                 </tr>
                             <?php } ?>
@@ -203,11 +203,11 @@
     </div>
 
     <?php
-    require './assets/sidebar/footer.php';
+    require '../assets/sidebar/footer.php';
     ?>
     </div>
 
-    <script src="./assets/js/handle.js"></script>
+    <script src="http://localhost/PhucSport/assets/js/handle.js"></script>
     
     <!-- Sau div toan trang la Modal -->
 </body>

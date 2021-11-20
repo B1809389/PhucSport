@@ -7,21 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/grid.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/grid.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=vietnamese">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-free-5.15.3-web/css/all.css">
 
 </head>
 
 <body>
     <div class="app">
         <?php
-        require './assets/sidebar/header.php';
-        include './assets/php/connect_db.php';
+        require '../assets/sidebar/header.php';
+        include '../assets/php/connect_db.php';
         ?>
 
         <?php
@@ -38,7 +38,7 @@
                     <div class="grid wide">
                         <div class="row app__content">
                             <div class="product__info">
-                                <form action="./cart.php?action=add&ms=<?= $row['MSHH'] ?>" method="post" class="product__info-form">
+                                <form action="http://localhost/PhucSport/KhachHang/cart.php?action=add&ms=<?= $row['MSHH'] ?>" method="post" class="product__info-form">
 
                                     <img src="<?= $row['TenHinh'] ?>" alt="" class="product__info-img">
                                     <div class="product__info-buy">
@@ -68,7 +68,7 @@
                                             <input class="product__info-btn add-cart" type="submit" value="Add Cart" name="addcart">
                                             <!-- <button class="product__info-btn facebook"><i class="product__info-contact-icon fab fa-facebook-square"></i>Facebook</button>
                                             <button class="product__info-btn gmail"><i class="product__info-contact-icon fas fa-envelope-open-text"></i>Gmail</button>-->
-                                            <button class="product__info-btn gmail"><a href="./index.php" class="add-cart-link">Back</a></button>
+                                            <button class="product__info-btn gmail"><a href="http://localhost/PhucSport/index.php" class="add-cart-link">Back</a></button>
                                         </div>
                                     </div>
                                 </form>
@@ -77,11 +77,11 @@
                                 <?php
                                 if (isset($_GET['MLH'])) {
                                     $MLH = $_GET['MLH'];
-                                    //include './assets/php/connect_db.php';
+                                    //include '../assets/php/connect_db.php';
                                     $result = mysqli_query($con, "select * from hanghoa as a, hinhhanghoa as b where a.MSHH = b.MSHH LIMIT 8");
                                     while ($row = mysqli_fetch_array($result)) { ?>
                                         <div class="col l-6">
-                                            <a href="./product.php?MLH= <?= $row['MaLoaiHang'] ?>&id=<?= $row['TenHH'] ?>" class="home-product__link">
+                                            <a href="../product.php?MLH= <?= $row['MaLoaiHang'] ?>&id=<?= $row['TenHH'] ?>" class="home-product__link">
                                                 <div class="home-product-item">
                                                     <div class="home-product-item__img" style="background-image: url(<?= $row['TenHinh'] ?>);">
                                                     </div>
@@ -125,7 +125,7 @@
                 </div>
 
 
-                <?php require './assets/sidebar/footer.php'; ?>
+                <?php require '../assets/sidebar/footer.php'; ?>
 
     </div>
 </body>

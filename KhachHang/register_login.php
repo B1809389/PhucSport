@@ -7,25 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register-Login</title>
-    <link  rel="stylesheet" href="./assets/css/style.css">
-    <link  rel="stylesheet" href="./assets/css/grid.css">
-    <link  rel="stylesheet" href="./assets/css/responsive.css">
-    <link rel="stylesheet" href="./assets/css/register_login.css">
+    <link  rel="stylesheet" href="http://localhost/PhucSport/assets/css/style.css">
+    <link  rel="stylesheet" href="http://localhost/PhucSport/assets/css/grid.css">
+    <link  rel="stylesheet" href="http://localhost/PhucSport/assets/css/responsive.css">
+    <link rel="stylesheet" href="http://localhost/PhucSport/assets/css/register_login.css">
     <!-- them dong ke tiep se lay duoc toan trang ko margin -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=vietnamese">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="http://localhost/PhucSport/assets/fonts/fontawesome-free-5.15.3-web/css/all.css">
 </head>
 
 <body>
     <div class="app">
         <?php
-        require './assets/sidebar/header.php';
+        require '../assets/sidebar/header.php';
         ?>
 
         <?php
         $i = 1;
-        require_once './assets/php/connect_db.php';
+        require_once '../assets/php/connect_db.php';
         if (isset($_POST['submit'])) {
             $cong = mysqli_query($con, "select * from khachhang");
             $mskh = 'KH' .rand();
@@ -49,7 +49,7 @@
 
                     if (mysqli_query($con, $sql1)) {
                         echo "<script> alert('Success');</script>";
-                        header('Refresh:1 ;url= ./register_login.php?action=login');
+                        header('Refresh:1 ;url= http://localhost/PhucSport/KhachHang/register_login.php?action=login');
                     } else {
                         echo "<script> alert('Fail');</script>";
                     }
@@ -114,7 +114,7 @@
                     </div>
 
                     <?php
-                    include './assets/php/connect_db.php';
+                    include '../assets/php/connect_db.php';
                     if (isset($_POST['login'])) {
                         $user = $_POST['user'];
                         $pass = $_POST['password'];
@@ -140,11 +140,11 @@
                                     echo '<script>alert("Please try again, Your UserName or Password is wrong!");</script>';
                                 } else {
                                     $_SESSION['user'] = $user;
-                                    header('Location: ./admin.php');
+                                    header('Location: http://localhost/PhucSport/QuanLy/admin.php');
                                 }
                             } else {
                                 $_SESSION['user'] = $user;
-                                header('Location: ./index.php');
+                                header('Location: http://localhost/PhucSport/index.php');
                             }
                         }
                         mysqli_close($con);
@@ -194,7 +194,7 @@
             </div>
         </div>
 
-        <?php //require './assets/sidebar/footer.php'; ?>
+        <?php //require 'http://localhost/PhucSport/assets/sidebar/footer.php'; ?>
     </div>
 
     <!-- Sau div toan trang la Modal -->

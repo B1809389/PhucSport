@@ -1,16 +1,16 @@
 <?php
 ob_start();
 session_start();
-include './assets/php/connect_db.php';
+include '../assets/php/connect_db.php';
 if (!isset($_SESSION['cart'])) {
-    header('Location: ./index.php');
+    header('Location: http://localhost/PhucSport/index.php');
 } else {
     if (isset($_GET['ms'])) {
         $ms = $_GET['ms'];
         if ($ms) {
             if (array_key_exists($ms, $_SESSION['cart'])) {
                 unset($_SESSION['cart'][$ms]);
-                header('Location: ./cart.php');
+                header('Location: http://localhost/PhucSport/KhachHang/cart.php');
                 // $_SESSION['cart'][$key]['sl']-=1;
             }
         }
@@ -29,13 +29,13 @@ if (!isset($_SESSION['cart'])) {
                 $_SESSION['cart'][$key]['sl'] -= 1;
             }
         }
-        header('Location: ./cart.php');
+        header('Location: http://localhost/PhucSport/KhachHang/cart.php');
     }
     if (isset($_GET['action'])) {
         $action = $_GET['action'];
         if ($action) {
             unset($_SESSION['cart']);
-            header('Location: ./index.php');
+            header('Location: http://localhost/PhucSport/index.php');
         }
     }
 }

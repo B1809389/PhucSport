@@ -20,8 +20,8 @@ session_start();
                     ?>
                     <div class="header__top-register__login-wrap">
                         <div class="header__top-action-sign">
-                            <div class="header__top-register"><a href="./register_login.php?action=register" class="header__top-action-sign-link">ĐĂNG KÝ</a></div>
-                            <div class="header__top-login"><a href="./register_login.php?action=login" class="header__top-action-sign-link">ĐĂNG NHẬP</a></div>
+                            <div class="header__top-register"><a href="http://localhost/PhucSport/KhachHang/register_login.php?action=register" class="header__top-action-sign-link">ĐĂNG KÝ</a></div>
+                            <div class="header__top-login"><a href="http://localhost/PhucSport/KhachHang/register_login.php?action=login" class="header__top-action-sign-link">ĐĂNG NHẬP</a></div>
                         </div>
 
                         <div class="header__top-action-signed">
@@ -34,9 +34,9 @@ session_start();
 
                             <div class="header__top-action-signed-wrap">
                                 <ul class="header__top-action-signed-wrap-list">
-                                    <li class="header__top-action-signed-wrap-item"><a href="./user.php" class="header__top-action-signed-wrap-item-link"><i class="fas fa-user-edit"></i> Quản lý tài khoản</a></li>
-                                    <li class="header__top-action-signed-wrap-item"><a href="./history.php" class="header__top-action-signed-wrap-item-link"><i class="fas fa-history"></i> Lịch sử mua hàng</a></li>
-                                    <li class="header__top-action-signed-wrap-item"><a href="./logout.php" class="header__top-action-signed-wrap-item-link"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a></li>
+                                    <li class="header__top-action-signed-wrap-item"><a href="http://localhost/PhucSport/KhachHang/user.php" class="header__top-action-signed-wrap-item-link"><i class="fas fa-user-edit"></i> Quản lý tài khoản</a></li>
+                                    <li class="header__top-action-signed-wrap-item"><a href="http://localhost/PhucSport/KhachHang/history.php" class="header__top-action-signed-wrap-item-link"><i class="fas fa-history"></i> Lịch sử mua hàng</a></li>
+                                    <li class="header__top-action-signed-wrap-item"><a href="http://localhost/PhucSport/KhachHang/logout.php" class="header__top-action-signed-wrap-item-link"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -87,7 +87,7 @@ session_start();
                                     <?php } ?>
                                 </ul>
                                 <div class="header__cart-btn">
-                                    <button class="header__cart-view-cart-btn"><a href="./cart.php" class="header__cart-view-cart-btn-link">View Cart</a></button>
+                                    <button class="header__cart-view-cart-btn"><a href="http://localhost/PhucSport/KhachHang/cart.php" class="header__cart-view-cart-btn-link">View Cart</a></button>
                                 </div>
                             </div>
                         <?php
@@ -113,36 +113,36 @@ session_start();
             </div>
             <div class="header__bottom hide-on-mobile-tablet">
                 <div class="header__bottom-navbar">
-                    <div class="header__bottom-navbar-menu"> <a href="./index.php" class="header__bottom-navbar-menu-link"><i class="fas fa-home"></i></a></div>
+                    <div class="header__bottom-navbar-menu"> <a href="http://localhost/PhucSport/index.php" class="header__bottom-navbar-menu-link"><i class="fas fa-home"></i></a></div>
                     <div class="header__bottom-navbar-menu">TẤT CẢ SẢN PHẨM &nbsp; <i class="fa fa-chevron-down" aria-hidden="true"></i>
                         <div class="header__bottom-navbar-menu-none">
                             <ul class="header__bottom-navbar-menu-none-list">
                                 <li class="header__bottom-navbar-menu-none-item">
                                     <h4 class="header__bottom-navbar-menu-none-item--brand"><i class="list__list-icon fas fa-chevron-circle-right">&nbsp;</i>NIKE</h4>
-                                    
+
 
                                     <ul class="list__list">
-                                        <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item--link">NIKE MERCURIAL</a></li>
-                                        <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item--link">NIKE PHANTOM</a></li>
-                                        <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item--link">NIKE TIEMPO</a></li>
+                                        <li class="list__list-item"><a href="http://localhost/PhucSport/index.php?action=NK" class="list__list-item--link">NIKE MERCURIAL</a></li>
+                                        <li class="list__list-item"><a href="http://localhost/PhucSport/index.php?action=NK" class="list__list-item--link">NIKE PHANTOM</a></li>
+                                        <li class="list__list-item"><a href="http://localhost/PhucSport/index.php?action=NK" class="list__list-item--link">NIKE TIEMPO</a></li>
                                     </ul>
-                                    
+
                                 </li>
                                 <li class="header__bottom-navbar-menu-none-item">
                                     <h4 class="header__bottom-navbar-menu-none-item--brand"><i class="list__list-icon fas fa-chevron-circle-right"></i>&nbsp;ADIDAS</h4>
 
                                     <ul class="list__list">
                                         <li class="list__list-item">
-                                            <a href="./index.php?action=AD" class="list__list-item--link">ADIDAS X</a>
+                                            <a href="http://localhost/PhucSport/index.php?action=AD" class="list__list-item--link">ADIDAS X</a>
                                         </li>
                                         <li class="list__list-item">
-                                            <a href="./index.php?action=AD" class="list__list-item--link">ADIDAS COPA</a>
+                                            <a href="http://localhost/PhucSport/index.php?action=AD" class="list__list-item--link">ADIDAS COPA</a>
                                         </li>
                                         <li class="list__list-item">
-                                            <a href="./index.php?action=AD" class="list__list-item--link">ADIDAS NEMEZIZ</a>
+                                            <a href="http://localhost/PhucSport/index.php?action=AD" class="list__list-item--link">ADIDAS NEMEZIZ</a>
                                         </li>
                                         <li class="list__list-item">
-                                            <a href="./index.php?action=AD" class="list__list-item--link">ADIDAS PREDATOR</a>
+                                            <a href="http://localhost/PhucSport/index.php?action=AD" class="list__list-item--link">ADIDAS PREDATOR</a>
                                         </li>
                                     </ul>
 
@@ -150,28 +150,28 @@ session_start();
                                 <li class="header__bottom-navbar-menu-none-item">
                                     <h4 class="header__bottom-navbar-menu-none-item--brand"><i class="list__list-icon fas fa-chevron-circle-right"></i>&nbsp;PUMA</h4>
                                     <ul class="list__list">
-                                        <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item"></a>
-                                            <a href="./index.php?action=PM" class="list__list-item--link">PUMA ULTRA</a>
+                                        <li class="list__list-item">
+                                            <a href="http://localhost/PhucSport/index.php?action=PM" class="list__list-item--link">PUMA ULTRA</a>
                                         </li>
-                                        <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item"></a>
-                                            <a href="./index.php?action=PM" class="list__list-item--link">PUMA FUTURE</a>
+                                        <li class="list__list-item">
+                                            <a href="http://localhost/PhucSport/index.php?action=PM" class="list__list-item--link">PUMA FUTURE</a>
                                         </li>
-                                        <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item"></a>
-                                            <a href="./index.php?action=PM" class="list__list-item--link">PUMA ONE</a>
+                                        <li class="list__list-item">
+                                            <a href="http://localhost/PhucSport/index.php?action=PM" class="list__list-item--link">PUMA ONE</a>
                                         </li>
                                     </ul>
                                 </li>
                                 <li class="header__bottom-navbar-menu-none-item">
                                     <h4 class="header__bottom-navbar-menu-none-item--brand"><i class="list__list-icon fas fa-chevron-circle-right"></i>&nbsp;MIZUNO</h4>
                                     <ul class="list__list">
-                                        <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item"></a>
-                                            <a href="./index.php?action=MZ" class="list__list-item--link">MIZUNO MORELIA</a>
+                                        <li class="list__list-item">
+                                            <a href="http://localhost/PhucSport/index.php?action=MZ" class="list__list-item--link">MIZUNO MORELIA</a>
                                         </li>
-                                        <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item"></a>
-                                            <a href="./index.php?action=MZ" class="list__list-item--link">MIZUNO MONARCIDA</a>
+                                        <li class="list__list-item">
+                                            <a href="http://localhost/PhucSport/index.php?action=MZ" class="list__list-item--link">MIZUNO MONARCIDA</a>
                                         </li>
-                                        <li class="list__list-item"><a href="./index.php?action=NK" class="list__list-item"></a>
-                                            <a href="./index.php?action=MZ" class="list__list-item--link">MIZUNO REBULA</a>
+                                        <li class="list__list-item">
+                                            <a href="http://localhost/PhucSport/index.php?action=MZ" class="list__list-item--link">MIZUNO REBULA</a>
                                         </li>
                                     </ul>
                                 </li>

@@ -1472,6 +1472,10 @@ i.home-product-item__like-icon-fill {
   margin-right: 10px;
 }
 
+.product__info-buy{
+  margin-left:12px;
+}
+
 .product__advertise {
   width: 30%;
   display: flex;
@@ -1489,6 +1493,7 @@ i.home-product-item__like-icon-fill {
 .product__info-action {
   display: flex;
   margin: 10px 0;
+  align-items: center;
 }
 
 .product__info-location {

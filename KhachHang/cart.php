@@ -7,13 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Cart</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/grid.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/grid.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=vietnamese">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-free-5.15.3-web/css/all.css">
 
 </head>
 
@@ -21,8 +21,8 @@
     <div class="app">
         <!-- Header -->
         <?php
-        require './assets/sidebar/header.php';
-        include './assets/php/connect_db.php';
+        require '../assets/sidebar/header.php';
+        include '../assets/php/connect_db.php';
         if (isset($_GET['action']) && isset($_GET['ms'])) {
             $action = $_GET['action'];
             $ms = $_GET['ms'];
@@ -72,15 +72,15 @@
                                 </div>
                                 <div class="cart__quantity">
                                     <div class="product__info-action">
-                                        <button class="product__quantity-btn"><a href="./update.php?id=sub&key=<?= $value['ms']  ?>" class="product__quantity-btn-link">-</a></button>
+                                        <button class="product__quantity-btn"><a href="http://localhost/PhucSport/KhachHang/update.php?id=sub&key=<?= $value['ms']  ?>" class="product__quantity-btn-link">-</a></button>
                                         <input class="product__quantity-input" type="text" value="<?= $value['sl']  ?>">
-                                        <button class="product__quantity-btn"><a href="./update.php?id=plus&key=<?= $value['ms']  ?>" class="product__quantity-btn-link">+</a></button>
+                                        <button class="product__quantity-btn"><a href="http://localhost/PhucSport/KhachHang/update.php?id=plus&key=<?= $value['ms']  ?>" class="product__quantity-btn-link">+</a></button>
                                         <!-- <h4 class="cart__info-name"></h4> -->
                                     </div>
                                 </div>
                                 <div class="cart__price">
                                     <h3 class="cart__info-price"><?= number_format($value['price'], 0, ',', '.') ?></h3>
-                                    <button class="cart__info-delete-btn"><a href="./update.php?ms=<?= $value['ms']  ?>" class="cart__info-delete-btn-link">Delete</a></button>
+                                    <button class="cart__info-delete-btn"><a href="http://localhost/PhucSport/KhachHang/update.php?ms=<?= $value['ms']  ?>" class="cart__info-delete-btn-link">Delete</a></button>
                                     <!-- <i class="far fa-trash-alt"></i> -->
                                 </div>
                             </div>
@@ -91,15 +91,15 @@
                             <div class="cart__info-heading"></div>
                             <div class="cart__info-price">Total: &nbsp; <?php echo number_format($s, 0, ',', '.')  ?></div>
                             <div class="cart__price-heading">
-                                <button class="cart__action update"><a href="./index.php" class="cart__info-delete-all-link">Add more</a></button>
-                                <button class="cart__action del"><a href="./update.php?action=del" class="cart__info-delete-all-link">Delete</a></button>
+                                <button class="cart__action update"><a href="http://localhost/PhucSport/index.php" class="cart__info-delete-all-link">Add more</a></button>
+                                <button class="cart__action del"><a href="http://localhost/PhucSport/KhachHang/update.php?action=del" class="cart__info-delete-all-link">Delete</a></button>
                             </div>
                         </div>
                     <?php }
                     ?>
                     <!-- Xu ly mua hang -->
                     <?php
-                    include './assets/php/connect_db.php';
+                    include '../assets/php/connect_db.php';
                     if (!isset($_SESSION['user'])) {
                         echo '<script>alert("You are not logged in")</script>';
                     } else {
@@ -123,7 +123,7 @@
                                 $ktra = mysqli_num_rows($kq);
                                 if ($ktra == 0) {
                                     echo '<script>alert("Please try again, Your ID is not exist!");</script>';
-                                    header('Refresh: 3;url= ./cart.php');
+                                    header('Refresh: 3;url= http://localhost/PhucSport/Khachhang/cart.php');
                                 } else {
                                     $result = mysqli_query($con, "select * from diachi where MaDC='$ms'");
                                     $check = mysqli_num_rows($result);
@@ -167,7 +167,7 @@
                                             //header('Refresh: 3;url= ./cart.php');
                                         } else {
                                             echo "<script> alert('Fail');</script>";
-                                            header('Refresh: 3;url= ./cart.php');
+                                            header('Refresh: 3;url= http://localhost/PhucSport/KhachHang/cart.php');
                                         }
                                     }
                                 }
@@ -178,7 +178,7 @@
                     <!-- Form de mua hang -->
                     <div class="form__order">
                         <h4 class="form__order-heading">Order Infomation</h4>
-                        <form action="./cart.php" class="cart__form-order" method="POST">
+                        <form action="http://localhost/PhucSport/KhachHang/cart.php" class="cart__form-order" method="POST">
                             <!-- <br> <input type="text" name="txtMS" class="cart__form__input" placeholder="ID User"> -->
                             <br> <input type="text" name="txtHoTen" class="cart__form__input" placeholder="Full Name">
                             <br> <input type="text" name="txtSoDienThoai" class="cart__form__input" placeholder="Phone Number">
@@ -224,7 +224,7 @@
                                 }
 
                                 // mysqli_close($con);
-                                // include './assets/php/connect_db.php';
+                                // include '../assets/php/connect_db.php';
                                 // $ms = $_POST['txtMS'];
                                 $tendangnhap = $_SESSION['user'];
                                 $timkiem = mysqli_query($con, "select * from khachhang where User='$tendangnhap'");
@@ -305,21 +305,21 @@
                                     mysqli_query($con, $sql1);
                                     if (mysqli_query($con, $sql1)) {
                                         echo "<script> alert('Your product order deleted !');</script>";
-                                        header('Refresh: 2;url= ./index.php?new=unset');
+                                        header('Refresh: 2;url= http://localhost/PhucSport/index.php?new=unset');
                                     } else {
                                         echo "<script> alert('Fail');</script>";
                                     }
                                 }
                             }
                             if ($action == 'continue') {
-                                header('Refresh: 1;url= ./index.php?new=unset');
+                                header('Refresh: 1;url= http://localhost/PhucSport/index.php?new=unset');
                             }
                         }
                         ?>
 
                         <div class="show__info-order-action">
-                            <button class="show__info-order-action-btn-continue"><a href="./cart.php?hanhdong=continue" class="show__info-order-action-btn-link">Continue Buy</a></button>
-                            <button class="show__info-order-action-btn-delete"><a href="./cart.php?hanhdong=delete&id=<?php echo $s ?>" class="show__info-order-action-btn-link">Delete</a></button>
+                            <button class="show__info-order-action-btn-continue"><a href="http://localhost/PhucSport/KhachHang/cart.php?hanhdong=continue" class="show__info-order-action-btn-link">Continue Buy</a></button>
+                            <button class="show__info-order-action-btn-delete"><a href="http://localhost/PhucSport/KhachHang/cart.php?hanhdong=delete&id=<?php echo $s ?>" class="show__info-order-action-btn-link">Delete</a></button>
                         </div>
                     </div>
 
@@ -330,7 +330,7 @@
 
 
         <!-- Footer -->
-        <?php require './assets/sidebar/footer.php'; ?>
+        <?php require '../assets/sidebar/footer.php'; ?>
 
     </div>
     <script>

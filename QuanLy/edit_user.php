@@ -7,30 +7,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit User</title>
-    <link  rel="stylesheet" href="./assets/css/style.css">
-    <link  rel="stylesheet" href="./assets/css/grid.css">
-    <link  rel="stylesheet" href="./assets/css/responsive.css">
-    <link  rel="stylesheet" href="./assets/css/user_manage.css">
+    <link  rel="stylesheet" href="../assets/css/style.css">
+    <link  rel="stylesheet" href="../assets/css/grid.css">
+    <link  rel="stylesheet" href="../assets/css/responsive.css">
+    <link  rel="stylesheet" href="../assets/css/user_manage.css">
 
 
     <!-- them dong ke tiep se lay duoc toan trang ko margin -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=vietnamese">
-    <link rel="stylesheet" href="./assets/fonts/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome-free-5.15.3-web/css/all.css">
 </head>
 
 <body>
     <div class="app">
-        <?php require './assets/sidebar/header.php';
+        <?php require '../assets/sidebar/header.php';
         if (isset($_SESSION['user'])) {
             if ($_SESSION['user'] == 'admin') {
             } else {
-                header('location: ./logout.php');
+                header('location: http://localhost/PhucSport/KhachHang/logout.php');
             }
         } else {
             echo "<script> confirm('You are not logged in');</script>";
 
-            header('location: ./admin.php');
+            header('location: http://localhost/PhucSport/QuanLy/admin.php');
         }
         ?>
 
@@ -45,16 +45,16 @@
                             </h3>
                             <ul class="category-list">
                                 <li class="category-item">
-                                    <a href="./admin.php" class="category-item-link">Dashboard</a>
+                                    <a href="http://localhost/PhucSport/QuanLy/admin.php" class="category-item-link">Dashboard</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="./product_manage.php" class="category-item-link">Product Manage</a>
+                                    <a href="http://localhost/PhucSport/QuanLy/product_manage.php" class="category-item-link">Product Manage</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="./user_manage.php" class="category-item-active category-item-link">Account Manage</a>
+                                    <a href="http://localhost/PhucSport/QuanLy/user_manage.php" class="category-item-active category-item-link">Account Manage</a>
                                 </li>
                                 <li class="category-item">
-                                    <a href="./order_manage.php" class="category-item-link">Order Manage</a>
+                                    <a href="http://localhost/PhucSport/QuanLy/order_manage.php" class="category-item-link">Order Manage</a>
                                 </li>
                                 <li class="category-item">
                                     <a href="" class="category-item-link">Configuration</a>
@@ -67,7 +67,7 @@
 
                         <div class="auth-form__register-container">
                             <?php
-                            include './assets/php/connect_db.php';
+                            include '../assets/php/connect_db.php';
                             if (isset($_POST['add'])) {
                                 $ms = $_POST['txtMS'];
                                 $hoten = $_POST['txtHoTen'];
@@ -120,7 +120,7 @@
 
                                 if (mysqli_query($con, $sql1)) {
                                     echo "<script> alert('Success');</script>";
-                                    header('Location: ./user_manage.php');
+                                    header('Location: http://localhost/PhucSport/QuanLy/user_manage.php');
                                 } else {
                                     echo "<script> alert('Fail');</script>";
                                 }
@@ -159,7 +159,7 @@
         </div>
     </div>
 
-    <?php require './assets/sidebar/footer.php'; ?>
+    <?php require '../assets/sidebar/footer.php'; ?>
     </div>
 
     <!-- Sau div toan trang la Modal -->
